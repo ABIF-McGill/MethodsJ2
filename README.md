@@ -11,7 +11,7 @@ The MethodsJ2 script guides to users to input information about a microscopy exp
 ## How to use MethodsJ2
 Please install Fiji from fiji.sc following the recommended installation procedure.
 
-Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (pumpkin_widefield.czi).
+Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (example_image_2c_1z_1t_.czi).
 
 Drag and drop the python script MethodsJ2.py onto the main Fiji window, this should open a script editor window. Click Run, and follow the dialog boxes, filling in the information as accurately as possible.
 
