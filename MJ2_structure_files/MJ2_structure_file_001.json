@@ -1,0 +1,611 @@
+ {
+    "settings": [
+        {
+            "Information": "MicroscopeStand",
+            "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "",
+            "Schema_ID": "InvertedMicroscopeStand.json",
+            "attributes": [
+                "Model",
+                "Type",
+                "Origin",
+                "Manufacturer"
+            ],
+            "blurb": "Images were acquired on a %s %s %s inverted microscope (%s) "
+        },
+        {
+            "Information": "MicroscopeStand",
+            "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "",
+            "Schema_ID": "UprightMicroscopeStand.json",
+            "attributes": [
+                "Model",
+                "Type",
+                "Origin",
+                "Manufacturer"
+            ],
+            "blurb": "Images were acquired on a %s %s %s upright microscope (%s) "
+        },
+        {
+            "Dialog_Box": "Microscope description",
+            "Dialog_Type": "addChoiceInternal",
+            "choices": ["Widefield Epifluorescence",
+                "Confocal laser-scanning microscope",
+                "TIRF",
+                "Spinning Disk",
+                "Multiphoton"
+            ],
+            "Setting": "Please select the best descriptor for this system ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": "configured for %s microscopy,"
+
+
+        },
+        {
+            "Dialog_Box": "Microscope description",
+            "category": "core",
+            "Dialog_Type": "addChoice",
+            "Setting": "Acquisition software: ",
+            "Add_to_same_row": 0,
+            "Schema_ID": "AcquisitionSoftware.json",
+            "attributes": [
+                "Name",
+                "Version",
+                "Developer"
+            ],
+            "blurb": "controlled with %s software (%s, %s),"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "Please describe your experiment, the sample, and how your sample was mounted"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "Sample description: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "width": 50,
+            "metadata value": "",
+            "blurb": "Experiment description: %s"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "Sample preparation: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "width": 50,
+            "metadata value": " ",
+            "blurb": "Sample description: %s "
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "Mounting medium: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "width": 50,
+            "metadata value": "",
+            "blurb": "Mounting medium: %s "
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "Coverglass: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "width": 50,
+            "metadata value": "",
+            "blurb": "Coverglass: %s "
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "Sample holder: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "width": 50,
+            "metadata value": "",
+            "blurb": "Sample holder: %s \n"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Image width in pixels (X): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsSizeX",
+            "metadata value": "",
+            "blurb": "Images had a width of %s"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Image height in pixels (Y): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsSizeY",
+            "metadata value": "",
+            "blurb": "and a height of %s pixels,"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Number of slices (Z): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "conditional_value": "",
+            "metadata key": "getPixelsSizeZ",
+            "metadata value": "",
+            "blurb": "%s planes (z),"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Number of channels (C): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsSizeC",
+            "metadata value": "",
+            "blurb": "%s channels,"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Number of frames (T): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "conditional_value": "",
+            "metadata key": "getPixelsSizeT",
+            "metadata value": "",
+            "blurb": "%s timepoints,"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Dimension order: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsDimensionOrder",
+            "metadata value": "",
+            "blurb": "with dimensional order %s."
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Pixel size XY (micron): ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsPhysicalSizeX",
+            "metadata value": "",
+            "blurb": "Voxels had a lateral size of %s um"
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Voxel size Z (micron): ",
+            "conditional_setting": "Number of slices (Z): ",
+            "conditional_value": "True",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "metadata key": "getPixelsPhysicalSizeZ",
+            "metadata value": "",
+            "blurb": "and a depth of %s um."
+        },
+        {
+            "Dialog_Box": "Image dimensions",
+            "category": "core",
+            "Setting": "Time interval: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "conditional_setting": "Number of frames (T): ",
+            "conditional_value": "True",
+            "metadata key": "frameInterval",
+            "metadata value": "",
+            "blurb": "The time interval between frames was %s s."
+        },
+
+        {
+            "Dialog_Box": " duplication ?",
+            "category": "core",
+            "Setting": "Time interval: ",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addStringField",
+            "conditional_setting": "Number of frames (T): ",
+            "conditional_value": "True",
+            "metadata key": "frameInterval",
+            "metadata value": "",
+            "blurb": "The time interval between frames was %s s."
+        },
+
+
+        {
+            "Dialog_Type": "addChoice",
+            "category": "core",
+            "Dialog_Box": "Objective",
+            "Setting": "Select objective: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Schema_ID": "Objective.json",
+            "attributes": [
+                "Magnification",
+                "LensNA",
+                "Correction",
+                "ContrastModulation",
+                "DIC",
+                "ImmersionType",
+                "CorrectionCollar",
+                "Manufacturer"
+            ],
+            "blurb": "equipped with a %sx NA %s %s %s %s %s objective %s (%s)."
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Setting": "Channel Description (e.g. fluorophore, labeled protein or cell type): ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "Images of %s were excited with "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Setting": "Light source: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Schema_ID": ["Fluorescence_LightSource_LightEmittingDiode.json",
+                "Fluorescence_LightSource_Arc.json",
+                "Fluorescence_LightSource_Filament.json",
+                "Fluorescence_LightSource_GenericExcitationSource.json",
+                "Fluorescence_LightSource_Laser.json"
+            ],
+            "attributes": [
+                "Model",
+                "Manufacturer"
+            ],
+            "Dialog_Type": "addChoice",
+            "blurb": "%s light source (%s)"
+
+        },
+         {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Setting": "Light source intensity: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "set to %s"
+
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Dialog_Type": "addChoice",
+            "Setting": "Select excitation filter: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Schema_ID": "ExcitationFilter.json",
+            "attributes": [
+                "Model",
+                "Manufacturer"
+            ],
+            "blurb": "and a %s excitation filter (%s) "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Dialog_Type": "addChoice",
+            "Setting": "Select dichroic: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Schema_ID": "StandardDichroic.json",
+            "attributes": [
+                "Model",
+                "Manufacturer"
+            ],
+            "blurb": "and wavelength selection was carried out with a %s dichroic mirror (%s). "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Dialog_Type": "addChoice",
+            "Setting": "Select emission filter: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Schema_ID": "EmissionFilter.json",
+            "attributes": [
+                "Model",
+                "Manufacturer"
+            ],
+            "blurb": "and a %s emission filter (%s) "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "category": "general",
+            "Setting": "Detector: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Schema_ID": ["CCD.json",
+                "IntensifiedCamera.json",
+                "CMOS.json",
+                "AnalogVideo.json",
+                "PhotoDiode.json",
+                "PhotoMultiplierTube.json",
+                "HybridPhotoDetector.json"
+            ],
+            "attributes": [
+                "Model",
+                "Schema_ID",
+                "Manufacturer"
+            ],
+            "Dialog_Type": "addChoice",
+            "blurb": "Images were acquired on a %s %s (%s)"
+        },
+
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "camera",
+            "Dialog_Type": "addStringField",
+            "Setting": "Exposure time: ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": "with an exposure time of %s "
+
+
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "camera",
+            "Dialog_Type": "addStringField",
+            "Setting": "Gain (if adjustable and available): ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": "with gain set to %s "
+
+
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "camera",
+            "category": "loop",
+            "Dialog_Type": "addChoiceInternal",
+            "choices": ["1x1",
+                "2x2",
+                "4x4",
+                "8x8"
+            ],
+            "Setting": "Camera Binning: ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": "and %s binning."
+
+
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addStringField",
+            "Setting": "Gain: ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "blurb": "with gain set to %s "
+
+
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addStringField",
+            "Setting": "Pixel Dwell Time ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "blurb": "with a pixel dwell time of %s "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addCheckbox",
+            "Setting": "Bidirectional scanning ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "blurb_true": "with bidirectional scanning ",
+            "blurb_false": "with unidirectional scanning"
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "Setting": "Line/frame averaging: ",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addMessage",
+            "message": "Line/frame averaging:",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": " with %sx "
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "Setting": "Mode: ",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addChoiceInternal",
+            "choices": [
+                "line",
+                "frame"
+            ],
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": "%s"
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "Setting": "Method: ",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addChoiceInternal",
+            "choices": [
+                "average",
+                "accumulation"
+            ],
+            "metadata value": "",
+            "Add_to_same_row": 1,
+            "CheckHardwareJSON": 0,
+            "blurb": "%s"
+        },
+        {
+            "Dialog_Box": "Channel Settings",
+            "Setting": "Number: ",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addChoiceInternal",
+            "choices": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "8",
+                "16"
+            ],
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "blurb": " with %sx "
+        },
+
+        {
+            "Dialog_Box": "Channel Settings",
+            "camera_vs_scanning": "scanning",
+            "Dialog_Type": "addStringField",
+            "Setting": "Pinhole ",
+            "metadata value": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "blurb": "and the pinhole set to %s "
+        },
+        {
+            "Dialog_Box": "Toggle optional devices",
+            "category": "core",
+            "Setting": "Environmental conditions maintained by device (temperature, CO2, humidity)",
+            "Schema_ID": "EnvironmentalControlDevice.json",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addCheckbox",
+            "if_true_dialog_box": "Environmental Conditions",
+            "blurb_true": "",
+            "blurb_false": "No environmental conditioning device was used."
+        },
+        {
+            "Dialog_Box": "Toggle optional devices",
+            "category": "core",
+            "Setting": "Focus Stabilization",
+            "Schema_ID": "FocusStabilizationDevice.json",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addCheckbox",
+            "if_true_dialog_box": "Focus Stabilization",
+            "blurb_true": "",
+            "blurb_false": "No focus stabilization device was used"
+        },
+        {
+            "Dialog_Box": "Environmental Conditions",
+            "category": "toggle",
+            "Setting": "Environmental Control Device",
+            "Schema_ID": "EnvironmentalControlDevice.json",
+            "attributes": [
+                "Name",
+                "TemperatureControl",
+                "Manufacturer"
+            ],
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 1,
+            "Dialog_Type": "addChoice",
+            "blurb": "Environmental control was maintained with a %s %s device (%s)."
+        },
+        {
+            "Dialog_Box": "Environmental Conditions",
+            "category": "toggle",
+            "Setting": "Temperature",
+            "Schema_ID": "EnvironmentalControlDevice.json",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "Cells were maintained at %s degrees C "
+        },
+        {
+            "Dialog_Box": "Environmental Conditions",
+            "category": "toggle",
+            "Setting": "CO2",
+            "Schema_ID": "EnvironmentalControlDevice.json",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "with %s CO2."
+        },
+        {
+            "Dialog_Box": "Focus Stabilization  ",
+            "category": "toggle",
+            "Setting": "",
+            "Schema_ID": "FocusStabilizationDevice.json",
+            "attributes": [
+                "Name",
+                "Mechanism",
+                "Manufacturer"
+            ],
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addChoice",
+            "blurb": " Focus was maintained with a %s %s focus stabilization device (%s)"
+        },
+        {
+            "Dialog_Box": "Acknowledgements",
+            "category": "",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addMessage",
+            "message": "Please remember to acknowledge the imaging core facility and staff in your publications"
+        },
+        {
+            "Dialog_Box": "Acknowledgements",
+            "category": "",
+            "Setting": "To facilitate this, please enter the name of the core facility: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "Images were collected and/or image processing and analysis for this manuscript was performed in (the) %s, "
+        },
+        {
+            "Dialog_Box": "Acknowledgements",
+            "category": "",
+            "Setting": "Please enter the name of a core facility staff member, if appropriate: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "with the assistance of %s."
+        },
+        {
+            "Dialog_Box": "Acknowledgements",
+            "category": "",
+            "Setting": "Please enter a Research Resource ID (RRID) if available: ",
+            "Add_to_same_row": 0,
+            "CheckHardwareJSON": 0,
+            "Dialog_Type": "addStringField",
+            "blurb": "(RRID: %s)."
+        }
+    ]
+}
