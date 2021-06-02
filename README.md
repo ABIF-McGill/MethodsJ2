@@ -3,10 +3,14 @@ Building on [MethodsJ](https://github.com/tp81/MethodsJ) , MethodsJ2 helps users
 
 As requirements, to use MethodsJ2, users first need a raw image from a microscopy experiment as well as a previously generated Micro-Meta App microscope hardware specifications file (.json). 
 
+<br />
+
 DISCLAIMER: ***
 
 ## How it works
 The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
+
+<br />
 
 ## How to use MethodsJ2
 Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure.
@@ -18,6 +22,8 @@ Drag and drop the python script MethodsJ2.py onto the main Fiji window, this sho
 Once the script is loaded, make sure the appropriate language is selected - click on Language, select Python.
 
 Click the "Run" button, and follow the dialog boxes, filling in the information as accurately as possible. More information on each dialog box is given below
+
+<br />
 
 ### -- Welcome to MethodsJ2
 This first window will prompt you for a microscopy image file, in order to extract metadata. You can drag and drop a file into the text input field, or click Browse, navigate to the appropriate folder, and select the appropriate image. We recommend you check the metadata and Bio-Formats metadata boxes, which will open metadata files which can help fill in crucial information.
@@ -94,14 +100,14 @@ For core facilities, citations and acknowledgements are extremely to show progre
 
 
 
-
+<br />
 
 
 ## Known issues
 ### OMERO plugins in Fiji
 Currently, the script does not work if OMERO plugins are installed (selected for updates) in Fiji. The current workaround is to either uncheck OMERO as an update site in your current Fiji installation (Help > Update > Manage Update Sites) -- or -- simply use a fresh installation of Fiji making sure OMERO is not selected as an update site.
 
-### Transmitted light image channels not supported
+### Transmitted light image channels not yet supported
 We are modifying the script to allow transmitted light images to be described (e.g. DIC, Brightfield, Phase Contrast, Dark field). 
 
 
