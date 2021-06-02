@@ -156,8 +156,8 @@ def main():
 		gui.addMessage("")
 		# gui.addFileField("Please select a MethodsJ2 settings structure file ", "")
 		# gui.addMessage("")
-		gui.addCheckbox("Display original metadata (recommended)", False)
-		gui.addCheckbox("Display Bio-Formats OME-XML metadata (recommended)", False)
+		gui.addCheckbox("Display original metadata (recommended)", True) 
+		gui.addCheckbox("Display Bio-Formats OME-XML metadata (recommended)", True)
 		gui.showDialog()
 		if gui.wasCanceled():
 			return None
