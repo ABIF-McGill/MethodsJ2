@@ -511,7 +511,7 @@ def main():
 	######## MJ2 Check instrument dialog box
 	#########################################
 
-	gui = GenericDialogPlus("Check Instrument - select Micro-Meta App json file")
+	gui = GenericDialogPlus("Microscope hardware: select the Micro-Meta App Microscope.json file")
 	gui.addMessage("According to the metadata: \n" + BLURB + "\n")
 	gui.addMessage("This image appears to have been acquired on a: \n")
 	gui.addMessage(ID + "\n")
