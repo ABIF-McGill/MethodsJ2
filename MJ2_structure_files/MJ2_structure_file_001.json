@@ -512,7 +512,7 @@
         {
             "Dialog_Box": "Toggle optional devices",
             "category": "core",
-            "Setting": "Focus Stabilization",
+            "Setting": "Focus Stabilization: ",
             "Schema_ID": "FocusStabilizationDevice.json",
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
@@ -524,7 +524,7 @@
         {
             "Dialog_Box": "Environmental Conditions",
             "category": "toggle",
-            "Setting": "Environmental Control Device",
+            "Setting": "Environmental Control Device: ",
             "Schema_ID": "EnvironmentalControlDevice.json",
             "attributes": [
                 "Name",
@@ -578,6 +578,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addMessage",
+            "width": 50,
             "message": "Please remember to acknowledge the imaging core facility and staff in your publications"
         },
         {
@@ -587,6 +588,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
+            "width": 50,
             "blurb": "Images were collected and/or image processing and analysis for this manuscript was performed in (the) %s, "
         },
         {
@@ -596,6 +598,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
+            "width": 50,
             "blurb": "with the assistance of %s."
         },
         {
@@ -605,6 +608,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
+            "width": 50,
             "blurb": "(RRID: %s)."
         }
     ]
