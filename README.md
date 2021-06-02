@@ -149,7 +149,7 @@ We are modifying the script to allow transmitted light images to be described (e
 <br />
 
 ## Customization
-It will be possible for users and core facilities to customize the dialog boxes and output text ot better suit their needs. Rather than have these buried in the script, the information required to generate dialog boxes is stored in a MethodsJ2 structure file, a JSON file stored in this github repository. 
+It will be possible for imaging scientists and core facilities to customize the dialog boxes and output text ot better suit the needs of their users. Rather than make changes  in the python script, the information required to generate dialog boxes is found in a MethodsJ2 structure file, which is a JSON file stored in this github repository. 
 
 For example, imaging scientists could add dialog boxes to select devices that are specific to their work, but which might not appear in Micro-Meta App, such as fluidics devices, stimulus projectors, electrophysiology pipettes and electrodes, etc. 
 
