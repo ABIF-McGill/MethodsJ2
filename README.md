@@ -1,3 +1,5 @@
+![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
+![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518371-81cf6080-c39f-11eb-9988-7e9776a44ac7.png)
 # MethodsJ2
 Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
 
