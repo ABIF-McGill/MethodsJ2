@@ -18,7 +18,7 @@ The MethodsJ2 script guides to users to input information about a microscopy exp
 
 <br />
 
-The output of MethodsJ2 should look something like this:
+The output of MethodsJ2 should look like this:
 
 ```
 
