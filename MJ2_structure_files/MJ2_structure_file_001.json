@@ -257,7 +257,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
-            "blurb": "Images of %s were excited with "
+            "blurb": "%s was excited with "
         },
         {
             "Dialog_Box": "Channel Settings",
