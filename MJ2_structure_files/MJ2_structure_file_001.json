@@ -276,7 +276,7 @@
                 "Manufacturer"
             ],
             "Dialog_Type": "addChoice",
-            "blurb": "%s light source (%s)"
+            "blurb": "a %s light source (%s)"
 
         },
          {
@@ -301,7 +301,7 @@
                 "Model",
                 "Manufacturer"
             ],
-            "blurb": "and a %s excitation filter (%s) "
+            "blurb": "and wavelength selection was carried out with a %s excitation filter (%s), "
         },
         {
             "Dialog_Box": "Channel Settings",
@@ -315,7 +315,7 @@
                 "Model",
                 "Manufacturer"
             ],
-            "blurb": "and wavelength selection was carried out with a %s dichroic mirror (%s). "
+            "blurb": "a %s dichroic mirror (%s) "
         },
         {
             "Dialog_Box": "Channel Settings",
@@ -329,7 +329,7 @@
                 "Model",
                 "Manufacturer"
             ],
-            "blurb": "and a %s emission filter (%s) "
+            "blurb": "and a %s emission filter (%s). "
         },
         {
             "Dialog_Box": "Channel Settings",
