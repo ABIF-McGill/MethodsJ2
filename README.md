@@ -11,6 +11,42 @@ DISCLAIMER: ***
 The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
 
 <br />
+The output of MethodsJ2 should look something like this:
+
+```
+
+----- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:
+
+Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope 
+(Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software 
+(2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC Mineral Oil objective 
+(Zeiss). 
+
+Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, 
+with dimensional order XYCZT. Voxels had a lateral size of 0.14 um.
+
+DAPI was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and wavelength 
+selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror 
+(Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 
+CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning. 
+Phalloidin-Alexa488 was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and 
+wavelength selection was carried out with a BP 450-490 excitation filter (Zeiss), a FT 510 
+dichroic mirror (Zeiss) and a BP 515-565 emission filter (Zeiss). Images were acquired on a 
+Axiocam506 CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning.
+Mitotracker Orange was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and 
+wavelength selection was carried out with a BP 546/12 excitation filter (Zeiss), a FT 580 dichroic 
+mirror (Zeiss) and a LP 590 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD 
+camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning.
+
+Acknowledgements: 
+Images were collected and/or image processing and analysis for this manuscript was performed 
+in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. 
+(RRID: SCR_017697).
+
+```
+
+Acknowledgements: 
+ Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
 
 ## How to use MethodsJ2
 Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure.
