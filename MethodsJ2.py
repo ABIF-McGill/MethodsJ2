@@ -104,17 +104,17 @@ def showText(text, title="Model output", hint="This is an example"):
 
 
 def textCleanUp(string):
-	string = string.replace('  ', ' ')
-	string = string.replace('  ', ' ')
-	string = string.replace('..', '.')
 	string = string.replace('CCD.json', 'CCD camera')
 	string = string.replace('CMOS.json', 'sCMOS camera')
 	string = string.replace('IntensifiedCamera.json', 'intensified CCD camera')
+	string = string.replace('gain set to and', '')
 	string = string.replace(', with the assistance of . (', '. (')
 	string = string.replace('(RRID: ).', '')
 	string = string.replace('.json', '')
-
 	string = string.replace('wide field', 'widefield')
+	string = string.replace('  ', ' ')
+	string = string.replace('  ', ' ')
+	string = string.replace('..', '.')
 
 	return (string)
 
