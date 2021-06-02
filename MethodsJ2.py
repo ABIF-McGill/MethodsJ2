@@ -135,9 +135,6 @@ def main():
 	settingsDialogJSON = json.load(page_to_retrieve)
 	settings = settingsDialogJSON['settings']
 
-	# page_to_retrieve = urllib2.urlopen('https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json?token=APJ42KFKVNCXH26FE4SXR4TAW252I')
-
-	# print settings
 
 	def print_and_log(a):
 		print(a)
