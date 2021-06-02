@@ -58,7 +58,7 @@ Acknowledgements:
 ## How to use MethodsJ2
 Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure. Make sure you have an active internet connection
 
-Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (example_image_2c_1z_1t_.czi).
+Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi).
 
 Drag and drop the python script MethodsJ2.py onto the main Fiji window, this should open a script editor window. Alternatively, click on File > New > Script... to open a script editor window, and then in that script editor, click on File > Open, navigate to the appropriate folder and select MethodsJ2.py
 
