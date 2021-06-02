@@ -1,7 +1,7 @@
 # MethodsJ2
 Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
 
-As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). 
+As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). The script runs in Fiji, and an active internet connection is required.
 
 <br />
 
@@ -49,7 +49,7 @@ Acknowledgements:
  Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
 
 ## How to use MethodsJ2
-Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure.
+Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure. Make sure you have an active internet connection
 
 Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (example_image_2c_1z_1t_.czi).
 
@@ -145,5 +145,16 @@ Currently, the script does not work if OMERO plugins are installed (selected for
 
 ### Transmitted light image channels not yet supported
 We are modifying the script to allow transmitted light images to be described (e.g. DIC, Brightfield, Phase Contrast, Dark field). 
+
+<br />
+
+## Customization
+It will be possible for users and core facilities to customize the dialog boxes and output text ot better suit their needs. Rather than have these buried in the script, the information required to generate dialog boxes is stored in a MethodsJ2 structure file, a JSON file stored in this github repository. 
+
+For example, imaging scientists could add dialog boxes to select devices that are specific to their work, but which might not appear in Micro-Meta App, such as fluidics devices, stimulus projectors, electrophysiology pipettes and electrodes, etc. 
+
+More information will be available soon, but the MJ2 json file can be downloaded, modified following the general structure of the file, and link that modified file either locally, or via a URL, provided it is publicly accessible.
+
+
 
 
