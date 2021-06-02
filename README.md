@@ -1,7 +1,7 @@
 # MethodsJ2
-Building on [MethodsJ](https://github.com/tp81/MethodsJ) , MethodsJ2 helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
+Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
 
-As requirements, to use MethodsJ2, users first need a raw image from a microscopy experiment as well as a previously generated Micro-Meta App microscope hardware specifications file (.json). 
+As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). 
 
 <br />
 
