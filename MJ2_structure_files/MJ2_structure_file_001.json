@@ -85,7 +85,7 @@
             "Setting": "",
             "Add_to_same_row": 0,
             "Dialog_Type": "addMessage",
-            "message": "e.g.: CHOK1 cells stably expressing GFP-Paxillin"
+            "message": "e.g.: Live CHOK1 cells stably expressing GFP-Paxillin"
         },
         {
             "Dialog_Box": "Experiment description",
@@ -100,12 +100,28 @@
         {
             "Dialog_Box": "Experiment description",
             "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "e.g.: grown overnight in on gelatin"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
             "Setting": "Mounting medium: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
             "width": 60,
             "metadata value": "",
             "blurb": "Mounting medium: %s "
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "e.g.: in phenol red free DMEM with 10% FCS and 1X Pen-Strep"
         },
         {
             "Dialog_Box": "Experiment description",
@@ -120,12 +136,28 @@
         {
             "Dialog_Box": "Experiment description",
             "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "e.g.: on No. 1.5 thickness"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
             "Setting": "Sample holder: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
             "width": 60,
             "metadata value": "",
             "blurb": "Sample holder: %s \n"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "e.g.: glass bottom 35 mm imaging dishes."
         },
         {
             "Dialog_Box": "Image dimensions",
