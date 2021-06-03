@@ -197,6 +197,7 @@ def main():
 
 		if settings[i].get('Dialog_Type') == 'addMessage':
 			gui.addMessage(settings[i].get('message'))
+			gui.addMessage(" \n ")
 
 		if settings[i].get('Dialog_Type') == 'addChoice':
 			settings[i]['tempList'] = []
