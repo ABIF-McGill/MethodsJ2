@@ -112,10 +112,12 @@ def textCleanUp(string):
 	string = string.replace('(RRID: ).', '')
 	string = string.replace('.json', '')
 	string = string.replace('wide field', 'widefield')
+	string = string.replace('Mineral Oil', 'oil')
 	string = string.replace('  ', ' ')
 	string = string.replace('  ', ' ')
 	string = string.replace('..', '.')
-	string = string.replace('The time interval between frames was n/a  s.','')
+	string = string.replace('The time interval between frames was n/a s.','')
+
 
 	return (string)
 
@@ -130,8 +132,8 @@ def main():
 	acknowledgement_blurb = ''
 
 	gui = NonBlockingGenericDialog("")
-	page_to_retrieve = urllib2.urlopen(
-		'https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json')
+	MJ2_structure_file_URL = 'https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json'
+	page_to_retrieve = urllib2.urlopen(MJ2_structure_file_URL)
 	settingsDialogJSON = json.load(page_to_retrieve)
 	settings = settingsDialogJSON['settings']
 
@@ -269,7 +271,7 @@ def main():
 	print_and_log(str(datetime.datetime.now()))
 
 	print_and_log("Image file: " + str(initial[0]))
-	print_and_log("MJ2 structure file: " + page_to_retrieve + "\n")
+	print_and_log("MJ2 structure file: " + MJ2_structure_file_URL + "\n")
 
 	# with open(initial[1]) as json_file:
 	#	settingsDialogJSON = json.load(json_file)
@@ -316,11 +318,10 @@ def main():
 	ninstruments = m.getInstrumentCount()
 	if ninstruments > 1:
 		# logger.error("More than one instrument found. Automatic generation will not work...")
-		mj1_errors += (
-			"More than one instrument found in the image metadata - image metadata may be incomplete, or inaccessible by bio-formats")
+		mj1_errors += (" More than one instrument found in the image metadata - image metadata may be incomplete, or inaccessible by bio-formats")
 	if ninstruments == 0:
 		# logger.error("No instrument in metadata - image metadata may be incomplete, or inaccessible by bio-formats")
-		mj1_errors += ("No instrument in metadata - image metadata may be incomplete, or inaccessible by bio-formats")
+		mj1_errors += (" No instrument in metadata - image metadata may be incomplete, or inaccessible by bio-formats")
 
 	# Metadata text generation bits from mj1
 
@@ -360,7 +361,7 @@ def main():
 			BLURB += TEMPLATE_PIXEL_SIZE.format(pxx_microns=pxx_microns)
 		except:
 			# logger.error(sys.exc_info()[0])
-			msg = "Could not extract physical pixel size! The image might be missing some crucial metadata."
+			msg = " Could not extract physical pixel size! The image might be missing some crucial metadata."
 			# logger.error(msg)
 			mj1_errors += (msg)
 			pxx_microns = "n/a"
@@ -375,7 +376,7 @@ def main():
 			BLURB += TEMPLATE_3D.format(pzz_microns=pzz_microns)
 		except:
 			# logger.error(sys.exc_info()[0])
-			msg = "No physical step size detected. The image might be missing some crucial metadata."
+			msg = " No physical step size detected. The image might be missing some crucial metadata."
 			mj1_errors += (msg)
 
 			pzz_microns = "n/a"
@@ -643,7 +644,7 @@ def main():
 				objective = "{:.0f}x".format(magnification1)
 		except:
 			# logger.error(sys.exc_info()[0])
-			msg = "Could not extract information about the objective! The image might be missing some crucial metadata."
+			msg = " Could not extract information about the objective! The image might be missing some crucial metadata."
 			# logger.error(msg)
 			mj1_errors += msg
 
@@ -661,7 +662,7 @@ def main():
 			if NA1 != None:
 				NA = str(NA1)
 		except:
-			msg = "Could not extract information about the objective! The image might be missing some crucial metadata."
+			msg = " Could not extract information about the objective! The image might be missing some crucial metadata."
 			# logger.error(msg)
 			mj1_errors += msg
 
@@ -669,16 +670,12 @@ def main():
 	if NA == "UNKNOWN" and "Nikon" in ff and NAm is not None:
 		NA = str(NAm)
 
-	# else:
-	#	HT=ir.getGlobalMetadata()
-	#	for k in HT.keys():
-	#		print "{}={}".format(k,HT.get(k))
-
+	
 	# Pixel size
 	nimages = m.getImageCount()
-	# logger.info("Found {} images".format(nimages))
+	
 	
-	BLURB += TEMPLATE_GENERAL.format(ID=ID, objective=objective)
+	BLURB += TEMPLATE_GENERAL.format(ID=ID, objective=objective, NA=NA)
 	##########################################
 	########### Check objective dialog box
 	###########################################
@@ -716,7 +713,7 @@ def main():
 		except:
 			# logger.error(sys.exc_info()[0])
 			# logger.error("Wasn't able to extract channel wavelength information for channel {}.".format(ic+1))
-			mj1_errors += ("Wasn't able to extract channel wavelength information for channel {}.".format(ic + 1))
+			mj1_errors += (" Wasn't able to extract channel wavelength information for channel {}.".format(ic + 1))
 			continue
 
 		try:
@@ -729,7 +726,7 @@ def main():
 		except:
 			# logger.error(sys.exc_info()[0])
 			# logger.error("Wasn't able to extract channel wavelength information for channel {}.".format(ic+1))
-			mj1_errors += ("Wasn't able to extract channel wavelength information for channel {}.".format(ic + 1))
+			mj1_errors += (" Wasn't able to extract channel wavelength information for channel {}.".format(ic + 1))
 			continue
 
 		# try:
@@ -743,7 +740,7 @@ def main():
 			if "CZI" in ff:  # TODO Check if error is across other images
 				# logger.warn("The exposure time was divided by 1000 to account for ms mistaken as s in CZI files")
 				mj1_errors += (
-					"The exposure time was divided by 1000 to allow reporting in seconds in .czi file format")
+					" The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel {}.".format(ic + 1))
 
 				etms = etms / 1000
 
@@ -878,29 +875,34 @@ def main():
 			user_input = str(dialog_getter(settings, j))
 			acknowledgement_blurb += ' ' + getInfoAndBlurb(user_input, settings, j)
 
-	print_and_log("\n" + mj1_errors + "n")
+	print_and_log("\n *** MethodsJ1 warnings: \n" + mj1_errors + "n")
 
-	print_and_log("\n ----------------- Text generation based on the metadata:  \n")
+	print_and_log("\n *** MethodsJ1 text generation based on the metadata:  \n")
 
 	print_and_log(textCleanUp(BLURB))
 
 	print_and_log(
-		"\n ----------------- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:  \n")
+		"\n *** MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:  \n")
 
-	print_and_log(scopeBlurb + objectiveBlurb)
+	#print_and_log(scopeBlurb + objectiveBlurb)
 
 	# print(blurb_prep)
 
-	print_and_log(blurb_dim)
+	#print_and_log(blurb_dim)
 
 	# blurb = blurb.replace('  ', ' ')
 	# blurb = blurb.replace('..', '.')
 	# blurb = blurb.replace('.json', '')
-	blurb += acknowledgement_blurb
-	blurb = textCleanUp(blurb)
-	print_and_log(blurb)
+	#blurb += acknowledgement_blurb
+	#blurb = textCleanUp(blurb)
+	
+	
+	concat_text = scopeBlurb + objectiveBlurb + blurb_dim + '\n' + blurb + acknowledgement_blurb
+	concat_text = textCleanUp(concat_text)
+	
+	print_and_log(concat_text)
 
-	showText(blurb, "MethodsJ2 output",
+	showText(concat_text, "MethodsJ2 output",
 			 "MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file")
 
 

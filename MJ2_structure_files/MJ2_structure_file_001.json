@@ -75,7 +75,7 @@
             "Setting": "Sample description: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
-            "width": 50,
+            "width": 60,
             "metadata value": "",
             "blurb": "Experiment description: %s"
         },
@@ -85,7 +85,7 @@
             "Setting": "Sample preparation: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
-            "width": 50,
+            "width": 60,
             "metadata value": " ",
             "blurb": "Sample description: %s "
         },
@@ -95,7 +95,7 @@
             "Setting": "Mounting medium: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
-            "width": 50,
+            "width": 60,
             "metadata value": "",
             "blurb": "Mounting medium: %s "
         },
@@ -105,7 +105,7 @@
             "Setting": "Coverglass: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
-            "width": 50,
+            "width": 60,
             "metadata value": "",
             "blurb": "Coverglass: %s "
         },
@@ -115,7 +115,7 @@
             "Setting": "Sample holder: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
-            "width": 50,
+            "width": 60,
             "metadata value": "",
             "blurb": "Sample holder: %s \n"
         },
@@ -217,20 +217,6 @@
         },
 
         {
-            "Dialog_Box": " duplication ?",
-            "category": "core",
-            "Setting": "Time interval: ",
-            "Add_to_same_row": 0,
-            "Dialog_Type": "addStringField",
-            "conditional_setting": "Number of frames (T): ",
-            "conditional_value": "True",
-            "metadata key": "frameInterval",
-            "metadata value": "",
-            "blurb": "The time interval between frames was %s s."
-        },
-
-
-        {
             "Dialog_Type": "addChoice",
             "category": "core",
             "Dialog_Box": "Objective",
@@ -257,6 +243,7 @@
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
+            "width": 40,
             "blurb": "%s was excited with "
         },
         {
