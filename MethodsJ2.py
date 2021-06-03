@@ -116,7 +116,7 @@ def textCleanUp(string):
 	string = string.replace('  ', ' ')
 	string = string.replace('  ', ' ')
 	string = string.replace('..', '.')
-	string = string.replace('The time interval between frames was n/a s.','')
+	string = string.replace('The time interval between frames was n/a s','')
 
 
 	return (string)
