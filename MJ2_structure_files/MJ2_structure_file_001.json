@@ -82,6 +82,14 @@
         {
             "Dialog_Box": "Experiment description",
             "category": "core",
+            "Setting": "",
+            "Add_to_same_row": 0,
+            "Dialog_Type": "addMessage",
+            "message": "e.g.: CHOK1 cells stably expressing GFP-Paxillin \n"
+        },
+        {
+            "Dialog_Box": "Experiment description",
+            "category": "core",
             "Setting": "Sample preparation: ",
             "Add_to_same_row": 0,
             "Dialog_Type": "addStringField",
