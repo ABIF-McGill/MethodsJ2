@@ -269,7 +269,7 @@ def main():
 	print_and_log(str(datetime.datetime.now()))
 
 	print_and_log("Image file: " + str(initial[0]))
-	print_and_log("MJ2 structure file: " + str(initial[1]) + "\n")
+	print_and_log("MJ2 structure file: " + page_to_retrieve + "\n")
 
 	# with open(initial[1]) as json_file:
 	#	settingsDialogJSON = json.load(json_file)
@@ -326,7 +326,7 @@ def main():
 
 	TEMPLATE_IMG_DIM = "The selected image has a width of {dim_X} pixels, a height of {dim_Y} pixels, {dim_C} channel(s), {dim_Z} slice(s), and {dim_T} frame(s), with a dimensional order of {dim_order}. "
 	TEMPLATE_PIXEL_SIZE = "The lateral pixel size is {pxx_microns} microns. "
-	TEMPLATE_GENERAL = "Imaging data was acquired on a {ID} system, using a {objective}"
+	TEMPLATE_GENERAL = "Imaging data was acquired on a {ID} system, using a {objective} {NA} NA objective. "
 	TEMPLATE_CHANNEL = "The excitation and emission wavelengths for channel {ch} were {ex} and {em} and the exposure time was {et}. "
 	TEMPLATE_3D = "A series of slices was collected with a step size of {pzz_microns} microns. "
 	TEMPLATE_TIME = "Images were acquired with a time interval of {timeInterval} {timeIntervalUnits}. "
@@ -343,9 +343,11 @@ def main():
 	dim_Z = m.getPixelsSizeZ(0)
 	dim_T = m.getPixelsSizeT(0)
 	dim_order = m.getPixelsDimensionOrder(0)
-
-	BLURB += TEMPLATE_IMG_DIM.format(dim_X=dim_X, dim_Y=dim_Y, dim_C=dim_C, dim_Z=dim_Z, dim_T=dim_T,
+	
+	temp_img_dim = TEMPLATE_IMG_DIM.format(dim_X=dim_X, dim_Y=dim_Y, dim_C=dim_C, dim_Z=dim_Z, dim_T=dim_T,
 									 dim_order=dim_order)
+
+	BLURB += temp_img_dim
 
 	###
 	### MJ1: get pixel size, z-step size, time interval
@@ -390,6 +392,8 @@ def main():
 		time_interval_blurb = TEMPLATE_TIME.format(timeInterval=str(time_interval), timeIntervalUnits=str(time_units))
 		BLURB += TEMPLATE_TIME.format(timeInterval=str(time_interval), timeIntervalUnits=str(time_units))
 
+	
+
 	for i in range(0, len(settings)):
 		if settings[i].get('metadata key') == 'getPixelsSizeX':
 			settings[i]['metadata value'] = str(dim_X)
@@ -409,7 +413,7 @@ def main():
 			settings[i]['metadata value'] = str(pzz_microns)
 		if settings[i].get('metadata key') == 'frameInterval':
 			settings[i]['metadata value'] = (str(time_interval) + ' ' + str(time_units))
-
+	
 	#############################
 	### experiment dialog box
 	############################
@@ -504,13 +508,14 @@ def main():
 					mode_with_spaces += letter
 
 	ID += " " + str(mode_with_spaces.strip())
-
+	
+	
 	#########################################
 	######## MJ2 Check instrument dialog box
 	#########################################
 
 	gui = GenericDialogPlus("Microscope hardware: select the Micro-Meta App Microscope.json file")
-	gui.addMessage("According to the metadata: \n" + BLURB + "\n")
+	gui.addMessage("According to the metadata: \n" + temp_img_dim + "\n")
 	gui.addMessage("This image appears to have been acquired on a: \n")
 	gui.addMessage(ID + "\n")
 	gui.addFileField("Please select a Micro-Meta App json file corresponding to this system", "")
@@ -672,7 +677,8 @@ def main():
 	# Pixel size
 	nimages = m.getImageCount()
 	# logger.info("Found {} images".format(nimages))
-
+	
+	BLURB += TEMPLATE_GENERAL.format(ID=ID, objective=objective)
 	##########################################
 	########### Check objective dialog box
 	###########################################
@@ -876,7 +882,7 @@ def main():
 
 	print_and_log("\n ----------------- Text generation based on the metadata:  \n")
 
-	print_and_log(BLURB)
+	print_and_log(textCleanUp(BLURB))
 
 	print_and_log(
 		"\n ----------------- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:  \n")
