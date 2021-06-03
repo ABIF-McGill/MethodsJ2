@@ -596,7 +596,7 @@
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
             "width": 50,
-            "blurb": "(RRID: %s)."
+            "blurb": "(RRID: %s)"
         }
     ]
 }
