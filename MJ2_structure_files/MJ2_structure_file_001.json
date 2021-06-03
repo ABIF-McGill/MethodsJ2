@@ -85,7 +85,7 @@
             "Setting": "",
             "Add_to_same_row": 0,
             "Dialog_Type": "addMessage",
-            "message": "e.g.: CHOK1 cells stably expressing GFP-Paxillin \n"
+            "message": "e.g.: CHOK1 cells stably expressing GFP-Paxillin"
         },
         {
             "Dialog_Box": "Experiment description",
@@ -604,7 +604,7 @@
             "CheckHardwareJSON": 0,
             "Dialog_Type": "addStringField",
             "width": 50,
-            "blurb": "(RRID: %s)"
+            "blurb": "(RRID: %s)."
         }
     ]
 }
