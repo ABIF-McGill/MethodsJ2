@@ -15,18 +15,19 @@ The MethodsJ2 script guides to users to input information about a microscopy exp
 
 
 ![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
+> Example image (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi) used to generate a draft methods section.
+
 
 <br />
 
-The output of MethodsJ2 should look like this:
-
+For the image displayed about, the output of MethodsJ2 should look like this:
 ```
 
 ----- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:
 
 Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope 
 (Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software 
-(2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC Mineral Oil objective 
+(2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC oil objective 
 (Zeiss). 
 
 Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, 
@@ -35,15 +36,15 @@ with dimensional order XYCZT. Voxels had a lateral size of 0.14 um.
 DAPI was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and wavelength 
 selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror 
 (Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 
-CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning. 
+CCD camera (Zeiss) with an exposure time of 200.00 ms with 2x2 binning. 
 Phalloidin-Alexa488 was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and 
 wavelength selection was carried out with a BP 450-490 excitation filter (Zeiss), a FT 510 
 dichroic mirror (Zeiss) and a BP 515-565 emission filter (Zeiss). Images were acquired on a 
-Axiocam506 CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning.
+Axiocam506 CCD camera (Zeiss) with an exposure time of 200.00 ms with 2x2 binning.
 Mitotracker Orange was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and 
 wavelength selection was carried out with a BP 546/12 excitation filter (Zeiss), a FT 580 dichroic 
 mirror (Zeiss) and a LP 590 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD 
-camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning.
+camera (Zeiss) with an exposure time of 200.00 ms with 2x2 binning.
 
 Acknowledgements: 
 Images were collected and/or image processing and analysis for this manuscript was performed 
@@ -52,8 +53,7 @@ in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of J
 
 ```
 
-Acknowledgements: 
- Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
+
 
 ## How to use MethodsJ2
 Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure. Make sure you have an active internet connection
@@ -155,7 +155,7 @@ We are modifying the script to allow transmitted light images to be described (e
 
 <br />
 
-## Customization
+## Extensibility
 It will be possible for imaging scientists and core facilities to customize the dialog boxes and output text ot better suit the needs of their users. Rather than make changes  in the python script, the information required to generate dialog boxes is found in a MethodsJ2 structure file, which is a JSON file stored in this github repository. 
 
 For example, imaging scientists could add dialog boxes to select devices that are specific to their work, but which might not appear in Micro-Meta App, such as fluidics devices, stimulus projectors, electrophysiology pipettes and electrodes, etc. 
