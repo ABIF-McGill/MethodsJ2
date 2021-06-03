@@ -1,7 +1,8 @@
+
 # MethodsJ2
 Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
 
-As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). 
+As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). The script runs in Fiji, and an active internet connection is required.
 
 <br />
 
@@ -11,7 +12,13 @@ DISCLAIMER: ***
 The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
 
 <br />
-The output of MethodsJ2 should look something like this:
+
+
+![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
+
+<br />
+
+The output of MethodsJ2 should look like this:
 
 ```
 
@@ -49,9 +56,9 @@ Acknowledgements:
  Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
 
 ## How to use MethodsJ2
-Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure.
+Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure. Make sure you have an active internet connection
 
-Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (example_image_2c_1z_1t_.czi).
+Download the python script MethodsJ2.py file from this repo, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi).
 
 Drag and drop the python script MethodsJ2.py onto the main Fiji window, this should open a script editor window. Alternatively, click on File > New > Script... to open a script editor window, and then in that script editor, click on File > Open, navigate to the appropriate folder and select MethodsJ2.py
 
@@ -145,5 +152,16 @@ Currently, the script does not work if OMERO plugins are installed (selected for
 
 ### Transmitted light image channels not yet supported
 We are modifying the script to allow transmitted light images to be described (e.g. DIC, Brightfield, Phase Contrast, Dark field). 
+
+<br />
+
+## Customization
+It will be possible for imaging scientists and core facilities to customize the dialog boxes and output text ot better suit the needs of their users. Rather than make changes  in the python script, the information required to generate dialog boxes is found in a MethodsJ2 structure file, which is a JSON file stored in this github repository. 
+
+For example, imaging scientists could add dialog boxes to select devices that are specific to their work, but which might not appear in Micro-Meta App, such as fluidics devices, stimulus projectors, electrophysiology pipettes and electrodes, etc. 
+
+More information will be available soon, but the MJ2 json file can be downloaded, modified following the general structure of the file, and link that modified file either locally, or via a URL, provided it is publicly accessible.
+
+
 
 
