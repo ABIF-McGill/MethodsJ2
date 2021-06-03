@@ -26,7 +26,7 @@ The output of MethodsJ2 should look like this:
 
 Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope 
 (Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software 
-(2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC Mineral Oil objective 
+(2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC oil objective 
 (Zeiss). 
 
 Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, 
