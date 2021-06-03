@@ -52,8 +52,7 @@ in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of J
 
 ```
 
-Acknowledgements: 
- Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
+
 
 ## How to use MethodsJ2
 Please install Fiji from [fiji.sc](fiji.sc) following the recommended installation procedure. Make sure you have an active internet connection
