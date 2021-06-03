@@ -539,7 +539,7 @@
         {
             "Dialog_Box": "Environmental Conditions",
             "category": "toggle",
-            "Setting": "Temperature",
+            "Setting": "Temperature: ",
             "Schema_ID": "EnvironmentalControlDevice.json",
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
@@ -549,7 +549,7 @@
         {
             "Dialog_Box": "Environmental Conditions",
             "category": "toggle",
-            "Setting": "CO2",
+            "Setting": "CO2: ",
             "Schema_ID": "EnvironmentalControlDevice.json",
             "Add_to_same_row": 0,
             "CheckHardwareJSON": 0,
