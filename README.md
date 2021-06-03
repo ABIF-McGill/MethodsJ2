@@ -15,11 +15,12 @@ The MethodsJ2 script guides to users to input information about a microscopy exp
 
 
 ![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
+> Example image (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi) used to generate an example methods section.
+
 
 <br />
 
-The output of MethodsJ2 should look like this:
-
+For the image displayed about, the output of MethodsJ2 should look like this:
 ```
 
 ----- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:
