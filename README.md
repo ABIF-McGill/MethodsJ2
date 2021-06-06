@@ -6,6 +6,11 @@ As requirements, to use **MethodsJ2**, users first need a raw image from a micro
 
 <br />
 
+Version 1.0, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10.
+
+<br />
+
+
 DISCLAIMER: ***
 
 ## How it works
