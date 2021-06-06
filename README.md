@@ -6,12 +6,12 @@ As requirements, to use **MethodsJ2**, users first need a raw image from a micro
 
 <br />
 
-Version 1.0, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10.
+Version 1.0, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
 
 <br />
 
 
-DISCLAIMER: ***
+DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather to be used as a starting point. Metadata is recorded by the microscope driving software, so at best it reflects the way the microscope's software was configured. In addition, this script uses the fantastic BioFormats library. It has been designed to extract as much information as possible from the image data, but formats are changing constantly so don't be surprised if the text doesn't completely reflect what you expect. If you do find some discrepancy, check with your facility staff (if the microscope is part of an imaging facility) for help on the appropriate wording or to check the configuration, and then with the BioFormats community to see if the metadata was not read correctly. If you believe there is an error in the script (not unlikely), feel free to reach out.
 
 ## How it works
 The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
