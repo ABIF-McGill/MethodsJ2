@@ -35,6 +35,10 @@
 ########################################################################################################
 
 
+# Version 1.0 
+# developed with structure file: MJ2_structure_file_001.json
+
+
 ##########################################################
 # import packages and modules
 ##########################################################
@@ -133,7 +137,8 @@ def main():
 
 	gui = NonBlockingGenericDialog("")
 	MJ2_structure_file_URL = 'https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json'
-	page_to_retrieve = urllib2.urlopen(MJ2_structure_file_URL)
+	page_to_retrieve = urllib2.urlopen(
+MJ2_structure_file_URL)
 	settingsDialogJSON = json.load(page_to_retrieve)
 	settings = settingsDialogJSON['settings']
 
@@ -319,7 +324,8 @@ def main():
 	ninstruments = m.getInstrumentCount()
 	if ninstruments > 1:
 		# logger.error("More than one instrument found. Automatic generation will not work...")
-		mj1_errors += (" More than one instrument found in the image metadata - image metadata may be incomplete, or inaccessible by bio-formats")
+		mj1_errors += (
+" More than one instrument found in the image metadata - image metadata may be incomplete, or inaccessible by bio-formats")
 	if ninstruments == 0:
 		# logger.error("No instrument in metadata - image metadata may be incomplete, or inaccessible by bio-formats")
 		mj1_errors += (" No instrument in metadata - image metadata may be incomplete, or inaccessible by bio-formats")
@@ -345,7 +351,8 @@ def main():
 	dim_Z = m.getPixelsSizeZ(0)
 	dim_T = m.getPixelsSizeT(0)
 	dim_order = m.getPixelsDimensionOrder(0)
-	
+
+	
 	temp_img_dim = TEMPLATE_IMG_DIM.format(dim_X=dim_X, dim_Y=dim_Y, dim_C=dim_C, dim_Z=dim_Z, dim_T=dim_T,
 									 dim_order=dim_order)
 
@@ -415,7 +422,8 @@ def main():
 			settings[i]['metadata value'] = str(pzz_microns)
 		if settings[i].get('metadata key') == 'frameInterval':
 			settings[i]['metadata value'] = (str(time_interval) + ' ' + str(time_units))
-	
+
+	
 	#############################
 	### experiment dialog box
 	############################
@@ -511,7 +519,8 @@ def main():
 
 	ID += " " + str(mode_with_spaces.strip())
 	
-	
+
+	
 	#########################################
 	######## MJ2 Check instrument dialog box
 	#########################################
@@ -675,7 +684,8 @@ def main():
 	# Pixel size
 	nimages = m.getImageCount()
 	
-	
+
+	
 	BLURB += TEMPLATE_GENERAL.format(ID=ID, objective=objective, NA=NA)
 	##########################################
 	########### Check objective dialog box
@@ -880,7 +890,8 @@ def main():
 
 	print_and_log("\n *** MethodsJ1 text generation based on the metadata:  \n")
 
-	print_and_log(textCleanUp(BLURB))
+	print_and_log(textCleanUp(BLURB)
+)
 
 	print_and_log(
 		"\n *** MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:  \n")
@@ -897,7 +908,8 @@ def main():
 	#blurb += acknowledgement_blurb
 	#blurb = textCleanUp(blurb)
 	
-	
+
+	
 	concat_text = scopeBlurb + objectiveBlurb + blurb_dim + '\n' + blurb + acknowledgement_blurb
 	concat_text = textCleanUp(concat_text)
 	
