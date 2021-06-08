@@ -2,11 +2,32 @@
 # MethodsJ2
 Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
 
+Version 1.0, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
+
 As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). The script runs in Fiji, and an active internet connection is required.
 
 <br />
 
-Version 1.0, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
+<br />
+
+
+![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
+> Demo image (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi).
+
+
+<br />
+
+
+<br />
+
+
+<img src="https://user-images.githubusercontent.com/64212264/121219507-c3558500-c851-11eb-9d81-9748d386ea76.PNG" width="615" height="322">
+
+> Screenshot from Micro-Meta App, used to generate a demo hardware specifications file. 
+<br />
+
+<br />
+
 
 <br />
 
@@ -16,16 +37,10 @@ DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather
 ## How it works
 The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
 
-<br />
 
 
-![Montage_BPAE__8bit_Montage](https://user-images.githubusercontent.com/64212264/120518327-77ad6200-c39f-11eb-9a6c-5a49c5aca810.png)
-> Example image (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi) used to generate a draft methods section.
 
-
-<br />
-
-For the image displayed about, the output of MethodsJ2 should look like this:
+For the demo image and [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) hardware specifications file displayed above, the output of MethodsJ2 should look like this:
 ```
 
 ----- MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:
