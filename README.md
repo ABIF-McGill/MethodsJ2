@@ -10,9 +10,33 @@ This Python/Jython script requires [Fiji/ImageJ](fiji.sc) - a recent or fresh in
 
 MethodsJ2 version 1.0 available in this repository, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10 Home. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
 
-As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). The script runs in Fiji, and an active internet connection is required. A demo microscope hardware specifications file (.json) and image are provided to test the script.
+As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). 
+
+The script runs in Fiji, and an active internet connection is required. A demo microscope hardware specifications file (.json) and image are provided to test the script.
 
 <br />
+
+
+<br />
+
+
+DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather to be used as a starting point. Metadata is recorded by the microscope driving software, so at best it reflects the way the microscope's software was configured. In addition, this script uses the fantastic BioFormats library. It has been designed to extract as much information as possible from the image data, but formats are changing constantly so don't be surprised if the text doesn't completely reflect what you expect. If you do find some discrepancy, check with your facility staff (if the microscope is part of an imaging facility) for help on the appropriate wording or to check the configuration, and then with the BioFormats community to see if the metadata was not read correctly. If you believe there is an error in the script (not unlikely), feel free to reach out.
+
+
+<br />
+
+## Installation
+No installation required. Please download the contents of this repository, and run the MethodsJ2.py script file in Fiji (detailed instructions below). The zipped repository should be around 20 Mb, mostly due to demo images, and download times depend on internet connection speed (should be under 1 minute on a standard system with a reasonable internet connection).
+
+<br />
+
+
+
+## How it works
+The MethodsJ2 script guides to users to input information about a microscopy experiment based on information from the image metadata, information from the hardware specifications file, and information directly input by the user. 
+
+The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
+
 
 <br />
 
@@ -35,23 +59,6 @@ As requirements, to use **MethodsJ2**, users first need a raw image from a micro
 <br />
 
 
-<br />
-
-
-DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather to be used as a starting point. Metadata is recorded by the microscope driving software, so at best it reflects the way the microscope's software was configured. In addition, this script uses the fantastic BioFormats library. It has been designed to extract as much information as possible from the image data, but formats are changing constantly so don't be surprised if the text doesn't completely reflect what you expect. If you do find some discrepancy, check with your facility staff (if the microscope is part of an imaging facility) for help on the appropriate wording or to check the configuration, and then with the BioFormats community to see if the metadata was not read correctly. If you believe there is an error in the script (not unlikely), feel free to reach out.
-
-
-<br />
-
-## Installation
-No installation required. Please download the contents of this repository, and run the MethodsJ2.py script file in Fiji (detailed instructions below).
-
-<br />
-
-
-
-## How it works
-The MethodsJ2 script guides to users to input information about a microscopy experiment. The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
 
 
 For the demo image and [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) hardware specifications file displayed above, the output of MethodsJ2 should look like this:
@@ -100,6 +107,8 @@ Drag and drop the python script MethodsJ2.py onto the main Fiji window, this sho
 Once the script is loaded, make sure the appropriate language is selected - click on Language, select Python.
 
 Click the "Run" button, and follow the dialog boxes, filling in the information as accurately as possible. More information on each dialog box is given below
+
+When first running the script in Fiji, it may take up to ~30 seconds for the script to launch (before seeing the first dialog box). Running the script is pretty quick, and simply depends on availability of the required information about the image. If all parameters are known by the user, it should take only a couple of minutes to go through the script and generate a draft methods section. 
 
 <br />
 
