@@ -94,6 +94,10 @@ in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of J
 
 ```
 
+<br />
+
+
+<br />
 
 
 ## Instructions with demo image and hardware specifications file
@@ -113,12 +117,20 @@ When first running the script in Fiji, it may take up to ~30 seconds for the scr
 <br />
 
 ### -- Welcome to MethodsJ2
+
+<img width="832" alt="Screen Shot 2021-06-02 at 2 37 22 PM" src="https://user-images.githubusercontent.com/64212264/121744659-391b5400-cad1-11eb-95e5-9237e468c9ae.png">
+
 This first window will prompt you for a microscopy image file, in order to extract metadata. You can drag and drop a file into the text input field, or click Browse, navigate to the appropriate folder, and select the appropriate image. We recommend loading the metadata and Bio-Formats metadata (check boxes), which will open metadata files which can help fill in crucial information. 
 ***As a demo, please select 'BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi' 
 
 Please note that MethodsJ2 will open the image in Fiji (using Bio-Formats), and so memory limits might apply. 
 
+<br />
+
 ### -- Sample preparation Information
+
+<img width="681" alt="Screen Shot 2021-06-02 at 2 38 48 PM" src="https://user-images.githubusercontent.com/64212264/121744748-56502280-cad1-11eb-9c98-ec1e14412cb8.png">
+
 
 This dialog box asks users to fill out sample preparation information. **Given the variety specimens and preparations, this input will not contribute to text generation**, but is rather there as a reminder for what information is important when writing a methods section. As per community guidelines, it is important for Materials and Methods to clearly indicate a sample description, sample preparation, mounting medium, coverglass and sample holder. 
 
@@ -149,20 +161,31 @@ Another example
 
 * Sample holder: _(glass bottom ibidi u-well slides)_
 
+<br />
 
 ### -- Image Dimensions
 
+<img width="717" alt="Screen Shot 2021-06-02 at 2 39 18 PM" src="https://user-images.githubusercontent.com/64212264/121744766-5d773080-cad1-11eb-8bea-a601fe9c5be5.png">
+
+
 Here, the script gets image dimensions metadata from the previously selected image. If this data appears to be wrong, it is possible that the metadata is not readable by Fiji / BioFormats - in which case, crucial metadata is likely missing, and we recommend paying close attention to the information 
 
+<br />
 
 ### -- Microscope hardware: select the Micro-Meta App Microscope.json file
+
+<img width="1332" alt="Screen Shot 2021-06-02 at 2 39 31 PM" src="https://user-images.githubusercontent.com/64212264/121744779-66680200-cad1-11eb-9405-d72a370f0801.png">
 
 In this dialog box, the script will attempt to describe the system as best as it can based on the metadata. From there, the user is prompted to select a Micro-Meta App hardware specifications file corresponding to the microscope used to acquire the image. This hardware specification file will be used by the script to provide drop-down menus for the user to select which components were used to acquire the image, for example which objective from the list of objectives available on the selected microscope.
 
 For the demo, please select 'abif_axiovert1_.json'
 
+<br />
 
 ### -- Microscope system overview
+
+<img width="732" alt="Screen Shot 2021-06-02 at 2 39 37 PM" src="https://user-images.githubusercontent.com/64212264/121744792-6d8f1000-cad1-11eb-94d4-8d16b9c382b2.png">
+
 
 Here, the user is asked to select the best general descriptor for the microscopy system selected, as well as the the acquisition software detected in the hardware specifications file.
 
@@ -170,11 +193,19 @@ For the demo, please select 'Widefield Epifluorescence', and the software 'Zen' 
 
 ### -- Select objective
 
+<img width="589" alt="Screen Shot 2021-06-02 at 2 39 44 PM" src="https://user-images.githubusercontent.com/64212264/121744799-71229700-cad1-11eb-82a0-6bbbd79a5034.png">
+
+
 The user is asked to select from a drop-down menu which objective was used. The drop-down menu is populated by the objectives available in the hardware specifications selected for this microscope. By selecting an objective based on its "name", the script will collect important objective information from the hardware specifications file (e.g. Magnification, Numerical Aperture, Correction, Collar, Manufacturer, etc). 
 
 For the demo, please select '63X PLAN APOCHROMAT, NA=1.40, OIL, DIC' from the list of objectives available in the system
 
+<br />
+
 ### -- Channel 1: Excitation, wavelength and detector selection
+
+<img width="965" alt="Screen Shot 2021-06-02 at 2 40 23 PM" src="https://user-images.githubusercontent.com/64212264/121744820-77187800-cad1-11eb-8bfb-ff7b7826564d.png">
+
 
 The user will now be prompted to provide information on the acquisition channel(s), for each channel separately, based on the order in which they appear in the image file. 
 
@@ -182,8 +213,13 @@ This channel dialog box will ask for a channel description, in which the user sh
 
 For the demo, the first channel can be described as 'DAPI', and the light source intensity used for acquisition of this channel was 50 %.
 
+<br />
 
 ### -- Channel 1: Detector settings
+
+
+<img width="460" alt="Screen Shot 2021-06-02 at 2 40 31 PM" src="https://user-images.githubusercontent.com/64212264/121744835-7aabff00-cad1-11eb-8cc1-69717494dcbe.png">
+
 
 This next dialog box allows users to input the settings on the detector. The dialog box itself and the requested information depends on whether a camera or point detector (PMT, APD, hybrid detector) was selected. For camera settings, the exposure time, gain and binning is requested, whereas for point detectors, dwell-time, and line/frame averaging information in requested.
 
@@ -191,15 +227,32 @@ For the demo, the exposure time should be detected automatically. The gain setti
 
 Importantly, these two dialog boxes will appear for each channel in the image. (Channel 1 is 'DAPI', Channel 2 is 'Phalloidin-488', and Channel 3 is 'MitoTracker Orange')
 
+<br />
+
 ### -- Select optional devices:
+
+<img width="671" alt="Screen Shot 2021-06-02 at 2 41 37 PM" src="https://user-images.githubusercontent.com/64212264/121744858-85ff2a80-cad1-11eb-855f-69bab0a315f8.png">
 
 If "optional" devices which are present on the microscopy system, the user will be prompted to select whether these have been used. For example, many systems are equipped with devices to control the environment (temperature, CO2, humidity, etc), however not all users will use these devices during their acquisition. Here, the users can select whether they used these systems for this experiment, and further information will be requested if needed.
 
 For the demo, neither there was no environmental conditioning or focus stabilization used for the acquisition.
 
+<br />
+
 ### -- Acknowledgements
 
+<img width="984" alt="Screen Shot 2021-06-02 at 2 42 07 PM" src="https://user-images.githubusercontent.com/64212264/121744874-8b5c7500-cad1-11eb-95c4-e23e26c7cce8.png">
+
+
 For core facilities, citations and acknowledgements are extremely to show progress, impact on research, and help enormously in securing funding. It is crucial for core facilities and imaging scientists to be acknowledged on manuscripts where their systems have been used. To this end, this final dialog box asks the user to input the name of the core facility, any staff member who contributed to training and support for the microscopy experiments, and a Research Resource ID (if applicable). These inputs will be used for text generation of a draft acknowledgement sentence, which can be revised and added to a manuscript.
+
+<br />
+
+### -- Output
+
+<img width="898" alt="Screen Shot 2021-06-02 at 2 42 27 PM" src="https://user-images.githubusercontent.com/64212264/121744907-97e0cd80-cad1-11eb-8712-875adf9da813.png">
+
+The output will appear in a popup window, already selected and copied to the clipboard. More information about the instance of the MethodsJ2 run is available in the ImageJ Log Window, as well as in the script editor console window (e.g. user selections, image file, microscope file, structure file, and output based only on metadata, as per MethodsJ)
 
 
 <br />
