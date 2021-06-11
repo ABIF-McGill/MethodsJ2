@@ -250,7 +250,8 @@ For core facilities, citations and acknowledgements are extremely to show progre
 
 ### -- Output
 
-<img width="898" alt="Screen Shot 2021-06-02 at 2 42 27 PM" src="https://user-images.githubusercontent.com/64212264/121744907-97e0cd80-cad1-11eb-8712-875adf9da813.png">
+![Untitled_output_width_Cropped_v2](https://user-images.githubusercontent.com/64212264/121747449-6ec23c00-cad5-11eb-8434-0d7165d3d64f.png)
+
 
 The output will appear in a popup window, already selected and copied to the clipboard. More information about the instance of the MethodsJ2 run is available in the ImageJ Log Window, as well as in the script editor console window (e.g. user selections, image file, microscope file, structure file, and output based only on metadata, as per MethodsJ)
 
