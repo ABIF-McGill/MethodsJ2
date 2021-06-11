@@ -8,7 +8,7 @@ Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps u
 
 This Python/Jython script requires [Fiji/ImageJ](fiji.sc) - a recent or fresh installation of Fiji is recommended, since the script requires that the BioFormats library is installed, and that the OMERO plugins are disabled.
 
-MethodsJ2 version 1.0 available in this repository, tested in Fiji (ImageJ version 1.53c) on OS X 10.14.6, and in Fiji (ImageJ version 1.53c) on Windows 10 Home. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
+MethodsJ2 version 1.0 available in this repository, tested in Fiji (ImageJ version 1.53c) on macOS Mojave 10.14.6 and macOS Catalina 10.15.7, and in Fiji (ImageJ version 1.53c) on Windows 10 Home. Requires BioFormats. Please note that OMERO plugins must be disabled in Fiji.
 
 As requirements, to use **MethodsJ2**, users first need a raw image from a microscopy experiment as well as a previously generated in [Micro-Meta App](https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/tag/1.2.2-b1-1) microscope hardware specifications file (.json) (see bioRxiv preprint [here](https://www.biorxiv.org/content/10.1101/2021.05.31.446382v2)). 
 
