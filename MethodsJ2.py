@@ -30,7 +30,10 @@
 #
 #
 # 	June 01 2020
-#
+#	
+#	See biorxiv preprint:
+#	MethodsJ2: A Software Tool to Improve Microscopy Methods Reporting
+#	doi: https://doi.org/10.1101/2021.06.23.449674
 #
 ########################################################################################################
 
