@@ -290,69 +290,38 @@ MJ2_structure_file_URL)
 		return (blurble)
 
 
-
-	initial = welcomeBox()
+	image_check = False
+	while image_check == False:
+		initial = welcomeBox()
 	
-	imagefilename = initial[0]
-	folder_path_button = initial[4]
-	print('_______________________----------------_____________________')
-	print(imagefilename)
-	
-	if folder_path_button == "Select a folder to save methods data":
-		folder_path = IJ.getDirectory('Choose a folder to save your data');
-	else:
-		folder_path = os.path.dirname(os.path.abspath(initial[0])) + os.path.sep
+		# get welcome box values
+		filename = initial[0]
+		# scopeJSONFile = initial[1]
+		showBioFormatsMetadata = initial[2]
+		showOrigMetadata = initial[3]
 
-	print(folder_path)
-	imagefilename_no_extension = os.path.basename(imagefilename.split(".",1)[0])
-	
-	counter = 0
-	file_check = True
-	while file_check == True:
-		file_to_create = (folder_path + "MethodsJ2_methods_text_" + imagefilename_no_extension + "_" + "%03d" % (counter,)  +".csv")
-		file_check = os.path.isfile(file_to_create)
-	
-		if file_check == True:
-			counter = counter + 1
-
-	print(file_to_create)
-	
-	
-	f = open(file_to_create, 'wb')
-	writer = csv.writer(f)
-	writer.writerow(['Label', 'Image metadata value', 'User input value'])
-
-
-
-	#print_and_log("\n ---------------------------------------------------------------------------------- \n")
-	print_and_log("Script", "MethodsJ2 " + mj2_version, '')
-	print_and_log("Date", str(datetime.datetime.now()), '')
-
-	print_and_log("Image file: ", str(initial[0]), '')
-	print_and_log("MJ2 structure file: ", MJ2_structure_file_URL, '')
-
-	
-
-	
-	# with open(initial[1]) as json_file:
-	#	settingsDialogJSON = json.load(json_file)
-
-	settings = settingsDialogJSON['settings']
-
-	# get welcome box values
-	filename = initial[0]
-	# scopeJSONFile = initial[1]
-	showBioFormatsMetadata = initial[2]
-	showOrigMetadata = initial[3]
-
-	# open image and display OME-XML metadata (if selected)
-	options = ImporterOptions()
-	options.setShowMetadata(showBioFormatsMetadata)
-	options.setShowOMEXML(showBioFormatsMetadata)
-	options.setId(filename)
-	imps = BF.openImagePlus(options)
-	for imp in imps:
-		imp.show()
+		# open image and display OME-XML metadata (if selected)
+		options = ImporterOptions()
+		options.setShowMetadata(showBioFormatsMetadata)
+		options.setShowOMEXML(showBioFormatsMetadata)
+		options.setId(filename)
+		try: 
+			imps = BF.openImagePlus(options)
+			for imp in imps:
+				imp.show()
+			image_check = True
+		except:
+			print("Selected file: ")
+			print(filename)
+			print("File could not be read by BioFormats")
+			gui = GenericDialogPlus("Not a readable image")
+			gui.addMessage("The selected file cannot be read by BioFormats in Fiji/Image. \n")
+			gui.addMessage("Please run the script again and select a different image file.")
+			gui.showDialog()
+			IJ.log("Selected file: " + filename)
+			IJ.log("File could not be read by BioFormats")
+			continue
+			#sys.exit() 
 
 	# display image original metadata from acquisition software (if selected)
 	if showOrigMetadata == True:
@@ -368,6 +337,44 @@ MJ2_structure_file_URL)
 	m = omeservice.createOMEXMLMetadata()
 	ir.setMetadataStore(m)
 	ir.setId(filename)
+
+
+
+	# set csv save directory
+	folder_path_button = initial[4]
+	if folder_path_button == "Select a folder to save methods data":
+		folder_path = IJ.getDirectory('Choose a folder to save your data');
+	else:
+		folder_path = os.path.dirname(os.path.abspath(initial[0])) + os.path.sep
+
+	print(folder_path)
+	imagefilename_no_extension = os.path.basename(filename.split(".",1)[0])
+	
+	counter = 0
+	file_check = True
+	
+	while file_check == True:
+		file_to_create = (folder_path + "MethodsJ2_methods_text_" + imagefilename_no_extension + "_" + "%03d" % (counter,)  +".csv")
+		file_check = os.path.isfile(file_to_create)
+	
+		if file_check == True:
+			counter = counter + 1
+
+	print(file_to_create)
+	
+	
+	f = open(file_to_create, 'wb')
+	writer = csv.writer(f)
+	writer.writerow(['Label', 'Image metadata value', 'User input value'])
+
+	
+	print_and_log("Script", "MethodsJ2 " + mj2_version, '')
+	print_and_log("Date", str(datetime.datetime.now()), '')
+
+	print_and_log("Image file: ", str(initial[0]), '')
+	print_and_log("MJ2 structure file: ", MJ2_structure_file_URL, '')
+
+
 	
 	time.sleep(0.25)
 
@@ -608,10 +615,10 @@ MJ2_structure_file_URL)
 		with open(scopeJSONFile) as json_file:
 			try:
 				data = json.load(json_file)
-				scopeHandle = data.get('Name' ,'')
+				
 
 				microscope_stand = data['MicroscopeStand']
-
+				scopeHandle = data.get('Name' ,'')
 				scopeManu = microscope_stand.get('Manufacturer', '')
 				scopeModel = microscope_stand.get('Model','')
 				scopeType = microscope_stand.get('Type', '')
@@ -623,8 +630,17 @@ MJ2_structure_file_URL)
 			except ValueError:
 				print('value error')
 				gui = NonBlockingGenericDialog("Not a valid json file")
+				gui.addMessage("The selected file is not a valid json file. Please select a valid json file created in Micro-Meta App")
 				gui.showDialog()
 				continue
+
+			except KeyError:
+				print('value error')
+				gui = NonBlockingGenericDialog("Not a valid Micro-Meta App file")
+				gui.addMessage("The selected file is not a valid hardware file - it might be corrupted or missing critical information. Please select a valid json file created in Micro-Meta App")
+				gui.showDialog()
+				continue
+				
 				
 	
 		
@@ -643,6 +659,9 @@ MJ2_structure_file_URL)
 			print(choice)
 			if choice == "Continue with this hardware file":
 				check_manufacturer = "Continue with this hardware file"
+		else:
+			check_manufacturer = "Continue with this hardware file"
+			
 		
 	
 	##### FIRST hardware json text and string formatting (eg. TRUE to "DIC", etc)
