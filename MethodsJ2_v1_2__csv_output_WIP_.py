@@ -29,7 +29,7 @@
 #
 #
 #
-# 	June 01 2020
+# 	August 06 2021
 #
 #	See biorxiv preprint:
 #	MethodsJ2: A Software Tool to Improve Microscopy Methods Reporting
@@ -38,7 +38,7 @@
 ########################################################################################################
 
 
-# Version 1.1 
+# Version 1.2 
 # developed with structure file: MJ2_structure_file_001.json
 
 
@@ -593,7 +593,7 @@ MJ2_structure_file_URL)
 		if gui.wasCanceled():
 			return None
 		scopeJSONFile = gui.getNextString()
-
+		
 	#print_and_log("\n" + "Micro-Meta App json file: " + str(scopeJSONFile) + "\n")
 		print_and_log("Micro-Meta App json file: ", str(scopeJSONFile), '')
 	
@@ -603,20 +603,31 @@ MJ2_structure_file_URL)
 	###################################
 
 	# load json file
+		# if json file isn't valid:
+		# ValueError: No JSON object could be decoded 
 		with open(scopeJSONFile) as json_file:
-			data = json.load(json_file)
+			try:
+				data = json.load(json_file)
+				scopeHandle = data.get('Name' ,'')
+
+				microscope_stand = data['MicroscopeStand']
+
+				scopeManu = microscope_stand.get('Manufacturer', '')
+				scopeModel = microscope_stand.get('Model','')
+				scopeType = microscope_stand.get('Type', '')
+				scopeTextCSV = scopeManu + ' ' + scopeModel + ' '+ scopeType + ' ' + '(' + scopeHandle + ')'
+				scopeText = "You have selected a Micro-Meta App file for a \n {scopeHandle},\n an {scopeType} system made by {scopeManu}. \n".format(
+					scopeHandle=scopeHandle, scopeType=scopeType, scopeManu=scopeManu)
+
+				
+			except ValueError:
+				print('value error')
+				gui = NonBlockingGenericDialog("Not a valid json file")
+				gui.showDialog()
+				continue
+				
 	
-		scopeHandle = data.get('Name' ,'')
-
-		microscope_stand = data['MicroscopeStand']
-
-		scopeManu = microscope_stand.get('Manufacturer', '')
-		scopeModel = microscope_stand.get('Model','')
-		scopeType = microscope_stand.get('Type', '')
-		scopeTextCSV = scopeManu + ' ' + scopeModel + ' '+ scopeType + ' ' + '(' + scopeHandle + ')'
-		scopeText = "You have selected a Micro-Meta App file for a \n {scopeHandle},\n an {scopeType} system made by {scopeManu}. \n".format(
-			scopeHandle=scopeHandle, scopeType=scopeType, scopeManu=scopeManu)
-
+		
 	########################################
 	### Check microscope manufacturer
 	#######################################
