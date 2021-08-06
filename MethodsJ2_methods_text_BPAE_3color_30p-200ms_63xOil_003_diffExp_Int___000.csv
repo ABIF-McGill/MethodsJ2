@@ -1,0 +1,70 @@
+Label,Image metadata value,User input value
+Script,,MethodsJ2 v1.2
+Date,,2021-08-06 17:59:01.763000
+Image file: ,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi
+MJ2 structure file: ,,https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json
+Sample description: ,,asdf
+Sample preparation: , ,asdf
+Mounting medium: ,,asdf
+Coverglass: ,,kljgghkghkgh
+Sample holder: ,,hgkjghkjj
+Image width in pixels (X): ,1012,1012
+Image height in pixels (Y): ,1020,1020
+Number of slices (Z): ,1,1
+Number of channels (C): ,3,3
+Number of frames (T): ,1,1
+Dimension order: ,XYCZT,XYCZT
+Pixel size XY (micron): ,0.14,0.14
+Voxel size Z (micron): ,n/a,n/a
+Time interval: ,n/a ,n/a 
+Micro-Meta App json file: ,,C:\Users\joelr\Desktop\untitled_1.json
+Micro-Meta App json file: ,,C:\Users\joelr\Desktop\MethodsJ2_methods_text_untitled_1_000.csv
+Micro-Meta App json file: ,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\abif_axiovert1_.json
+Microscope: ,Zeiss wide field,Zeiss Axiovert 200M Compound (ABIF Axiovert1)
+Please select the best descriptor for this system ,,Widefield Epifluorescence
+Acquisition software: ,,Zen
+Select objective: ,63x NA 1.4,"63X PLAN APOCHROMAT, NA=1.40, OIL, DIC"
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,
+Light source: ,,X-Cite light source
+Light source intensity: ,,
+Select excitation filter: ,,G 365 - DAPI excitation filter
+Select dichroic: ,,FT 395 - DAPI beamsplitter
+Select emission filter: ,,BP 445/50 - DAPI emission filter
+Detector: ,,Axiocam 506
+Exposure time: ,100.00 ms,100.00 ms
+Gain (if adjustable and available): ,,
+Camera Binning: ,,1x1
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,
+Light source: ,,X-Cite light source
+Light source intensity: ,,
+Select excitation filter: ,,G 365 - DAPI excitation filter
+Select dichroic: ,,FT 395 - DAPI beamsplitter
+Select emission filter: ,,BP 445/50 - DAPI emission filter
+Detector: ,,Axiocam 506
+Exposure time: ,150.00 ms,150.00 ms
+Gain (if adjustable and available): ,,
+Camera Binning: ,,1x1
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,
+Light source: ,,X-Cite light source
+Light source intensity: ,,
+Select excitation filter: ,,G 365 - DAPI excitation filter
+Select dichroic: ,,FT 395 - DAPI beamsplitter
+Select emission filter: ,,BP 445/50 - DAPI emission filter
+Detector: ,,Axiocam 506
+Exposure time: ,200.00 ms,200.00 ms
+Gain (if adjustable and available): ,,
+Camera Binning: ,,1x1
+"Environmental conditions maintained by device (temperature, CO2, humidity)",,False
+Focus Stabilization: ,,False
+"To facilitate this, please enter the name of the core facility: ",,
+"Please enter the name of a core facility staff member, if appropriate: ",,
+Please enter a Research Resource ID (RRID) if available: ,,
+MethodsJ1 warnings:,, No physical step size detected. The image might be missing some crucial metadata. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 1. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 2. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 3.
+MethodsJ1 text generation based on the metadata: ,,"The selected image has a width of 1012 pixels, a height of 1020 pixels, 3 channel(s), 1 slice(s), and 1 frame(s), with a dimensional order of XYCZT. The lateral pixel size is 0.14 microns. Imaging data was acquired on a Zeiss widefield system, using a 63x 1.4 NA objective. The excitation and emission wavelengths for channel 1 were 353 nm and 465 nm and the exposure time was 100.00 ms. The excitation and emission wavelengths for channel 2 were 488 nm and 509 nm and the exposure time was 150.00 ms. The excitation and emission wavelengths for channel 3 were 551 nm and 575 nm and the exposure time was 200.00 ms. "
+MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:,,"Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope (Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software (2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC oil objective (Zeiss). Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, with dimensional order XYCZT. Voxels had a lateral size of 0.14 um .
+ was excited with a X-Cite 120 LED light source (Excelitas) set to and wavelength selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror (Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 100.00 ms with gain set to and 1x1 binning. was excited with a X-Cite 120 LED light source (Excelitas) set to and wavelength selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror (Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 150.00 ms with gain set to and 1x1 binning. was excited with a X-Cite 120 LED light source (Excelitas) set to and wavelength selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror (Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 1x1 binning.
+ 
+Acknowledgements: 
+ Images were collected and/or image processing and analysis for this manuscript was performed in (the) , with the assistance of . 
+
+ Methods and acknowledgement sections text generated with MethodsJ2 - please verify for accuracy and grammatical correctness"

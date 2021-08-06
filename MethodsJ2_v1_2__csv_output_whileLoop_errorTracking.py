@@ -1022,7 +1022,7 @@ MJ2_structure_file_URL)
 	#blurb = textCleanUp(blurb)
 	
 
-	disclaimer = 'Methods and acknowledgement sections text generated with MethodsJ2 - please verify for accuracy and grammatical correctness' 
+	disclaimer = '\n Methods and acknowledgement sections text generated with MethodsJ2 - please verify for accuracy and grammatical correctness' 
 	concat_text = scopeBlurb + objectiveBlurb + blurb_dim + '\n' + blurb + acknowledgement_blurb +'\n' + disclaimer
 	concat_text = textCleanUp(concat_text)
 	
