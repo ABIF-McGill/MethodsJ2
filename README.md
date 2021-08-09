@@ -48,7 +48,7 @@ No installation required. Please download the contents of this repository, and r
 
 
 ## How it works
-The MethodsJ2 script guides to users to input information about a microscopy experiment based on information from the image metadata, information from the hardware specifications file, and information directly input by the user. 
+The MethodsJ2 script guides users to input information about a microscopy experiment based on information from the image metadata, information from the hardware specifications file, and information directly input by the user. 
 
 The script displays dialog boxes wherein users can directly input information as text, or select the appropriate options from a drop-down menu assembled from the microscopy hardware specifications file generated in Micro-Meta App. User input and selections are then used to "fill in the blanks" in blocks of text designed to generate a draft of a experimental methods section.
 
