@@ -35,13 +35,16 @@ The script runs in Fiji, and an active internet connection is required. A demo m
 <br />
 
 
-DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather to be used as a starting point. Metadata is recorded by the microscope driving software, so at best it reflects the way the microscope's software was configured. In addition, this script uses the fantastic BioFormats library. It has been designed to extract as much information as possible from the image data, but formats are changing constantly so don't be surprised if the text doesn't completely reflect what you expect. If you do find some discrepancy, check with your facility staff (if the microscope is part of an imaging facility) for help on the appropriate wording or to check the configuration, and then with the BioFormats community to see if the metadata was not read correctly. If you believe there is an error in the script (not unlikely), feel free to reach out.
+DISCLAIMER: As per MethodsJ, this is not meant to be applied blindly, but rather to be used as a starting point. Metadata is recorded by the microscope driving software, so at best it reflects the way the microscope's software was configured. In addition, this script uses the fantastic BioFormats library. It has been designed to extract as much information as possible from the image data, but formats change occasionally so don't be surprised if the text doesn't completely reflect what you expect. If you do find some discrepancy, check with your facility staff (if the microscope is part of an imaging facility) for help on the appropriate wording or to check the configuration, and then with the BioFormats community to see if the metadata was not read correctly. If you believe there is an error in the script (not unlikely), feel free to reach out.
+
+
+**Importantly**, please verify the text generation output and the csv file carefully or with someone familiar with the microscope or your experiments, in order to make sure that the information is correct, and that the grammar and syntax are ok, before copy-pasting the text into your manuscript. 
 
 
 <br />
 
 ## Installation
-No installation required. Please download the contents of this repository, and run the MethodsJ2.py script file in Fiji (detailed instructions below). The zipped repository should be around 20 Mb, mostly due to demo images, and download times depend on internet connection speed (should be under 1 minute on a standard system with a reasonable internet connection).
+No installation required. Please download the contents of this repository, and run the MethodsJ2_v1_2_.py script file in Fiji (detailed instructions below). The zipped repository should be around 20 Mb, mostly due to demo images, and download times depend on internet connection speed (should be under 1 minute on a standard system with a reasonable internet connection).
 
 <br />
 
@@ -133,7 +136,8 @@ When first running the script in Fiji, it may take up to ~30 seconds for the scr
 
 ### -- Welcome to MethodsJ2
 
-<img width="832" alt="Screen Shot 2021-06-02 at 2 37 22 PM" src="https://user-images.githubusercontent.com/64212264/121744659-391b5400-cad1-11eb-95e5-9237e468c9ae.png">
+![MJ2_new_welcome_window_folderCSV_ (2)](https://user-images.githubusercontent.com/64212264/128763359-e49b229b-4dae-4180-9a83-d3d8078413fe.PNG)
+
 
 This first window will prompt you for a microscopy image file, in order to extract metadata. You can drag and drop a file into the text input field, or click Browse, navigate to the appropriate folder, and select the appropriate image. We recommend loading the metadata and Bio-Formats metadata (check boxes), which will open metadata files which can help fill in crucial information. 
 ***As a demo, please select 'BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi' 
@@ -141,6 +145,10 @@ This first window will prompt you for a microscopy image file, in order to extra
 Then, please select where to save the csv output for this run of MethodsJ2. The csv file can be saved in the same folder as the image, or you can choose another folder.
 
 Please note that MethodsJ2 will open the image in Fiji (using Bio-Formats), and so memory limits might apply. 
+
+After selecting the file and target folder, the script will try to open the image using Bio-Formats (memory limits might apply). 
+
+Error check: If the file is unreadable by Bio-Formats (not an image, etc), it will alert the user and return to the previous window, allowing the user to select a new file. 
 
 
 <br />
@@ -196,7 +204,10 @@ Here, the script gets image dimensions metadata from the previously selected ima
 
 In this dialog box, the script will attempt to describe the system as best as it can based on the metadata. From there, the user is prompted to select a Micro-Meta App hardware specifications file corresponding to the microscope used to acquire the image. This hardware specification file will be used by the script to provide drop-down menus for the user to select which components were used to acquire the image, for example which objective from the list of objectives available on the selected microscope.
 
+Error check: If the selected file is not a .json file generated with Micro-Meta App (by searching for the manufacturer of the microscope stand), the script will alert the user and return to the previous window, to select an appropriate .json file. Additionally, if the manufacturer detected in the image metadata does not match the manufacturer of the microscope stand (in the hardware configuration file), it will alert the user, who can then decide to choose a new file or continue with this file.
+
 For the demo, please select 'abif_axiovert1_.json'
+
 
 <br />
 
