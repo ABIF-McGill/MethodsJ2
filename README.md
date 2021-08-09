@@ -1,6 +1,21 @@
 
 # MethodsJ2
-Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware specification file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
+Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware configuration file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc.
+
+<br />
+
+
+
+
+## Current version:
+
+Current version in progress: 1.2
+
+Please run 'MethodsJ2_v1_2_.py'
+
+**Main updates** : Script checks for appropriate file formats (e.g. images, Micro-Meta App hardware configuration files) and alerts user if unreadable file is selected. Verifies microscope manufacturer from image metadata and microscope hardware configuration file, alerts user if these are different. Outputs and saves a csv file containing all detected information (from image metadata) and all user input information (either manually entered or selected from Micro-Meta App hardware configuration file), as well as image file path, Micro-Meta App hardware configuration file path, and generated methods text output, allowing to check for discrepancies and to store and share the information. --Many thanks to our reviewers for these helpful suggestions!
+
+
 
 <br />
 
@@ -106,7 +121,7 @@ Please install Fiji from [fiji.sc](fiji.sc) following the recommended installati
 
 Please download the contents of this repository, including the python script MethodsJ2.py file, as well as the example Micro-Meta App hardware specifications file (abif-axiovert1.json), and the example images (BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi).
 
-Drag and drop the python script MethodsJ2.py onto the main Fiji window, this should open a script editor window. Alternatively, click on File > New > Script... to open a script editor window, and then in that script editor, click on File > Open, navigate to the appropriate folder and select MethodsJ2.py
+Drag and drop the python script MethodsJ2_v1_2_.py onto the main Fiji window, this should open a script editor window. Alternatively, click on File > New > Script... to open a script editor window, and then in that script editor, click on File > Open, navigate to the appropriate folder and select MethodsJ2_v1_2_.py
 
 Once the script is loaded, make sure the appropriate language is selected - click on Language, select Python.
 
@@ -123,7 +138,10 @@ When first running the script in Fiji, it may take up to ~30 seconds for the scr
 This first window will prompt you for a microscopy image file, in order to extract metadata. You can drag and drop a file into the text input field, or click Browse, navigate to the appropriate folder, and select the appropriate image. We recommend loading the metadata and Bio-Formats metadata (check boxes), which will open metadata files which can help fill in crucial information. 
 ***As a demo, please select 'BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi' 
 
+Then, please select where to save the csv output for this run of MethodsJ2. The csv file can be saved in the same folder as the image, or you can choose another folder.
+
 Please note that MethodsJ2 will open the image in Fiji (using Bio-Formats), and so memory limits might apply. 
+
 
 <br />
 
@@ -255,6 +273,20 @@ For core facilities, citations and acknowledgements are extremely to show progre
 
 The output will appear in a popup window, already selected and copied to the clipboard. More information about the instance of the MethodsJ2 run is available in the ImageJ Log Window, as well as in the script editor console window (e.g. user selections, image file, microscope file, structure file, and output based only on metadata, as per MethodsJ)
 
+<br />
+
+### -- csv file 
+
+A csv file is generated containing all the information detected from the image metadata and all the user input information (both manually entered and selected from the Micro-Meta App configuration file). The csv is saved either in the same folder as the image file, or in a folder selected by the user (in the first welcome dialog box). This csv file can be used to check for accuracy of the user-input information (compared to the metadata), and is the record for this particular run of MethodsJ2.
+
+In many cases, information is input differently in the image metadata compared to how it is stored in Micro-Meta App (and OMERO). For example, information about the objective might be stored in the image metadata as "PlanApo 100x NA 1.4 (Zeiss)" or "Zeiss 100X Plan-Apo 1.4 N.A." or other permutations of the same information, depending on who set up the microscope. This makes text/string matching difficult. Thus, in the csv file, the user can directly compare and judge for themselves whether the information is accurate, by directly comparing the image metadata information with the user selection. 
+
+As an example, rows 21 and 24 ('Microscope' and 'Select Objective') in the following screenshot are examples of information which coincide accurately, but do not have matching text.
+
+
+![CSV_output_](https://user-images.githubusercontent.com/64212264/128735433-6a44693a-46cb-432c-a495-8f94a8741ffb.PNG)
+
+
 
 <br />
 
@@ -264,7 +296,7 @@ The output will appear in a popup window, already selected and copied to the cli
 Currently, the script does not work if OMERO plugins are installed (selected for updates) in Fiji. The current workaround is to either uncheck OMERO as an update site in your current Fiji installation (Help > Update > Manage Update Sites) -- or -- simply use a fresh installation of Fiji making sure OMERO is not selected as an update site.
 
 ### Transmitted light image channels not yet supported
-We are modifying the script to allow transmitted light images to be described (e.g. DIC, Brightfield, Phase Contrast, Dark field). 
+We are currently working on the script to allow transmitted light images to be described (e.g. DIC, Brightfield, Phase Contrast, Dark field). 
 
 <br />
 
