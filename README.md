@@ -136,7 +136,8 @@ When first running the script in Fiji, it may take up to ~30 seconds for the scr
 
 ### -- Welcome to MethodsJ2
 
-![MJ2_new_welcome_window_folderCSV_ (2)](https://user-images.githubusercontent.com/64212264/128763359-e49b229b-4dae-4180-9a83-d3d8078413fe.PNG)
+
+<img width="832" alt="Screen Shot 2021-08-09 at 9 46 07 PM" src="https://user-images.githubusercontent.com/64212264/128796096-1db67878-6473-488b-8802-60da200a01c7.png">
 
 
 This first window will prompt you for a microscopy image file, in order to extract metadata. You can drag and drop a file into the text input field, or click Browse, navigate to the appropriate folder, and select the appropriate image. We recommend loading the metadata and Bio-Formats metadata (check boxes), which will open metadata files which can help fill in crucial information. 
