@@ -156,7 +156,7 @@ MJ2_structure_file_URL)
 	def print_and_log(a, b, c, d=''):
 		print(a + " " + b)
 		IJ.log(a +" " + b)
-		writer.writerow([a, d, c, b])
+		writer.writerow([a, c, b, d])
 		print(d)
 		
 
@@ -366,7 +366,7 @@ MJ2_structure_file_URL)
 	
 	f = open(file_to_create, 'wb')
 	writer = csv.writer(f)
-	writer.writerow(['Label', 'Micro-Meta App Schema_ID', 'Image metadata value', 'User input value'])
+	writer.writerow(['Label', 'Image metadata value', 'User input value', 'Micro-Meta App Schema_ID'])
 
 	
 	print_and_log("Script", "MethodsJ2 " + mj2_version, '')

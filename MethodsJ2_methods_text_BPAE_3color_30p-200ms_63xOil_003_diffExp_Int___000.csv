@@ -1,68 +1,68 @@
-Label,Micro-Meta App Schema_ID,Image metadata value,User input value
-Script,,,MethodsJ2 v1.2
-Date,,,40:57.6
-Image file: ,,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi
-MJ2 structure file: ,,,https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json
-Sample description: ,,,Cultured BPAE cells
-Sample preparation: ,, ,"grown on No. 1.5 glass coverslips, fixed with 4% PFA and stained with DAPI, Phalloidin Alexa Fluor-488 and MitoTracker Orange"
-Mounting medium: ,,,mounted in Cytoseal
+Label,Image metadata value,User input value,Micro-Meta App Schema_ID
+Script,,MethodsJ2 v1.2,
+Date,,40:57.6,
+Image file: ,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\BPAE_3color_30p-200ms_63xOil_003_diffExp_Int__.czi,
+MJ2 structure file: ,,https://raw.githubusercontent.com/ABIF-McGill/MethodsJ2/main/MJ2_structure_files/MJ2_structure_file_001.json,
+Sample description: ,,Cultured BPAE cells,
+Sample preparation: , ,"grown on No. 1.5 glass coverslips, fixed with 4% PFA and stained with DAPI, Phalloidin Alexa Fluor-488 and MitoTracker Orange",
+Mounting medium: ,,mounted in Cytoseal,
 Coverglass: ,,,
-Sample holder: ,,,on glass slides
-Image width in pixels (X): ,,1012,1012
-Image height in pixels (Y): ,,1020,1020
-Number of slices (Z): ,,1,1
-Number of channels (C): ,,3,3
-Number of frames (T): ,,1,1
-Dimension order: ,,XYCZT,XYCZT
-Pixel size XY (micron): ,,0.14,0.14
-Voxel size Z (micron): ,,n/a,n/a
-Time interval: ,,n/a ,n/a 
-Micro-Meta App json file: ,,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\abif_axiovert1_.json
-Microscope: ,InvertedMicroscopeStand.json,Zeiss wide field,Zeiss Axiovert 200M Compound (ABIF Axiovert1)
-Please select the best descriptor for this system ,,,Widefield Epifluorescence
-Acquisition software: ,AcquisitionSoftware.json,,Zen
-Select objective: ,Objective.json,63x NA 1.4,"63X PLAN APOCHROMAT, NA=1.40, OIL, DIC"
-"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,,DAPI
-Light source: ,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']",,X-Cite light source
-Light source intensity: ,,,30%
-Select excitation filter: ,ExcitationFilter.json,,G 365 - DAPI excitation filter
-Select dichroic: ,StandardDichroic.json,,FT 395 - DAPI beamsplitter
-Select emission filter: ,EmissionFilter.json,,BP 445/50 - DAPI emission filter
-Detector: ,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']",,Axiocam 506
-Exposure time: ,,100.00 ms,100.00 ms
+Sample holder: ,,on glass slides,
+Image width in pixels (X): ,1012,1012,
+Image height in pixels (Y): ,1020,1020,
+Number of slices (Z): ,1,1,
+Number of channels (C): ,3,3,
+Number of frames (T): ,1,1,
+Dimension order: ,XYCZT,XYCZT,
+Pixel size XY (micron): ,0.14,0.14,
+Voxel size Z (micron): ,n/a,n/a,
+Time interval: ,n/a ,n/a ,
+Micro-Meta App json file: ,,C:\Users\joelr\Documents\GitHubRepositories\MethodsJ2\abif_axiovert1_.json,
+Microscope: ,Zeiss wide field,Zeiss Axiovert 200M Compound (ABIF Axiovert1),InvertedMicroscopeStand.json
+Please select the best descriptor for this system ,,Widefield Epifluorescence,
+Acquisition software: ,,Zen,AcquisitionSoftware.json
+Select objective: ,63x NA 1.4,"63X PLAN APOCHROMAT, NA=1.40, OIL, DIC",Objective.json
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,DAPI,
+Light source: ,,X-Cite light source,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']"
+Light source intensity: ,,30%,
+Select excitation filter: ,,G 365 - DAPI excitation filter,ExcitationFilter.json
+Select dichroic: ,,FT 395 - DAPI beamsplitter,StandardDichroic.json
+Select emission filter: ,,BP 445/50 - DAPI emission filter,EmissionFilter.json
+Detector: ,,Axiocam 506,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']"
+Exposure time: ,100.00 ms,100.00 ms,
 Gain (if adjustable and available): ,,,
-Camera Binning: ,,,2x2
-"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,,Phalloidin-Alexa488
-Light source: ,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']",,X-Cite light source
-Light source intensity: ,,,30%
-Select excitation filter: ,ExcitationFilter.json,,BP 450-490 - GFP excitation filter
-Select dichroic: ,StandardDichroic.json,,FT 510 - GFP beamsplitter
-Select emission filter: ,EmissionFilter.json,,BP 515-565 - GFP emission filter
-Detector: ,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']",,Axiocam 506
-Exposure time: ,,150.00 ms,150.00 ms
+Camera Binning: ,,2x2,
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,Phalloidin-Alexa488,
+Light source: ,,X-Cite light source,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']"
+Light source intensity: ,,30%,
+Select excitation filter: ,,BP 450-490 - GFP excitation filter,ExcitationFilter.json
+Select dichroic: ,,FT 510 - GFP beamsplitter,StandardDichroic.json
+Select emission filter: ,,BP 515-565 - GFP emission filter,EmissionFilter.json
+Detector: ,,Axiocam 506,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']"
+Exposure time: ,150.00 ms,150.00 ms,
 Gain (if adjustable and available): ,,,
-Camera Binning: ,,,2x2
-"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,,Mitotracker Orange
-Light source: ,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']",,X-Cite light source
-Light source intensity: ,,,30%
-Select excitation filter: ,ExcitationFilter.json,,BP 546/12 - TRITC excitation filter
-Select dichroic: ,StandardDichroic.json,,FT 580 - TRITC beamsplitter
-Select emission filter: ,EmissionFilter.json,,LP 590 - TRITC emission filter
-Detector: ,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']",,Axiocam 506
-Exposure time: ,,200.00 ms,200.00 ms
+Camera Binning: ,,2x2,
+"Channel Description (e.g. fluorophore, labeled protein or cell type): ",,Mitotracker Orange,
+Light source: ,,X-Cite light source,"[u'Fluorescence_LightSource_LightEmittingDiode.json', u'Fluorescence_LightSource_Arc.json', u'Fluorescence_LightSource_Filament.json', u'Fluorescence_LightSource_GenericExcitationSource.json', u'Fluorescence_LightSource_Laser.json']"
+Light source intensity: ,,30%,
+Select excitation filter: ,,BP 546/12 - TRITC excitation filter,ExcitationFilter.json
+Select dichroic: ,,FT 580 - TRITC beamsplitter,StandardDichroic.json
+Select emission filter: ,,LP 590 - TRITC emission filter,EmissionFilter.json
+Detector: ,,Axiocam 506,"[u'CCD.json', u'IntensifiedCamera.json', u'CMOS.json', u'AnalogVideo.json', u'PhotoDiode.json', u'PhotoMultiplierTube.json', u'HybridPhotoDetector.json']"
+Exposure time: ,200.00 ms,200.00 ms,
 Gain (if adjustable and available): ,,,
-Camera Binning: ,,,2x2
-"Environmental conditions maintained by device (temperature, CO2, humidity)",EnvironmentalControlDevice.json,,FALSE
-Focus Stabilization: ,FocusStabilizationDevice.json,,FALSE
-"To facilitate this, please enter the name of the core facility: ",,,Advanced BioImaging Facility (ABIF) at McGill
-"Please enter the name of a core facility staff member, if appropriate: ",,,Joel Ryan
-Please enter a Research Resource ID (RRID) if available: ,,,SCR_017697
-MethodsJ1 warnings:,,, No physical step size detected. The image might be missing some crucial metadata. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 1. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 2. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 3.
-MethodsJ1 text generation based on the metadata: ,,,"The selected image has a width of 1012 pixels, a height of 1020 pixels, 3 channel(s), 1 slice(s), and 1 frame(s), with a dimensional order of XYCZT. The lateral pixel size is 0.14 microns. Imaging data was acquired on a Zeiss widefield system, using a 63x 1.4 NA objective. The excitation and emission wavelengths for channel 1 were 353 nm and 465 nm and the exposure time was 100.00 ms. The excitation and emission wavelengths for channel 2 were 488 nm and 509 nm and the exposure time was 150.00 ms. The excitation and emission wavelengths for channel 3 were 551 nm and 575 nm and the exposure time was 200.00 ms. "
-MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:,,,"Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope (Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software (2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC oil objective (Zeiss). Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, with dimensional order XYCZT. Voxels had a lateral size of 0.14 um .
+Camera Binning: ,,2x2,
+"Environmental conditions maintained by device (temperature, CO2, humidity)",,FALSE,EnvironmentalControlDevice.json
+Focus Stabilization: ,,FALSE,FocusStabilizationDevice.json
+"To facilitate this, please enter the name of the core facility: ",,Advanced BioImaging Facility (ABIF) at McGill,
+"Please enter the name of a core facility staff member, if appropriate: ",,Joel Ryan,
+Please enter a Research Resource ID (RRID) if available: ,,SCR_017697,
+MethodsJ1 warnings:,, No physical step size detected. The image might be missing some crucial metadata. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 1. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 2. The exposure time was divided by 1000 to allow reporting in seconds in .czi file format for channel 3.,
+MethodsJ1 text generation based on the metadata: ,,"The selected image has a width of 1012 pixels, a height of 1020 pixels, 3 channel(s), 1 slice(s), and 1 frame(s), with a dimensional order of XYCZT. The lateral pixel size is 0.14 microns. Imaging data was acquired on a Zeiss widefield system, using a 63x 1.4 NA objective. The excitation and emission wavelengths for channel 1 were 353 nm and 465 nm and the exposure time was 100.00 ms. The excitation and emission wavelengths for channel 2 were 488 nm and 509 nm and the exposure time was 150.00 ms. The excitation and emission wavelengths for channel 3 were 551 nm and 575 nm and the exposure time was 200.00 ms. ",
+MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:,,"Images were acquired on a Axiovert 200M Compound Commercial-custom modified inverted microscope (Zeiss) configured for Widefield Epifluorescence microscopy, controlled with Zen software (2.6 Blue edition, Zeiss), equipped with a 63x NA 1.4 Apochromat DIC oil objective (Zeiss). Images had a width of 1012 and a height of 1020 pixels, 1 planes (z), 3 channels, 1 timepoints, with dimensional order XYCZT. Voxels had a lateral size of 0.14 um .
  DAPI was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and wavelength selection was carried out with a G 365 excitation filter (Zeiss), a FT 395 dichroic mirror (Zeiss) and a BP 445/50 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 100.00 ms with gain set to and 2x2 binning. Phalloidin-Alexa488 was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and wavelength selection was carried out with a BP 450-490 excitation filter (Zeiss), a FT 510 dichroic mirror (Zeiss) and a BP 515-565 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 150.00 ms with gain set to and 2x2 binning. Mitotracker Orange was excited with a X-Cite 120 LED light source (Excelitas) set to 30 % and wavelength selection was carried out with a BP 546/12 excitation filter (Zeiss), a FT 580 dichroic mirror (Zeiss) and a LP 590 emission filter (Zeiss). Images were acquired on a Axiocam506 CCD camera (Zeiss) with an exposure time of 200.00 ms with gain set to and 2x2 binning.
  
 Acknowledgements: 
  Images were collected and/or image processing and analysis for this manuscript was performed in (the) Advanced BioImaging Facility (ABIF) at McGill, with the assistance of Joel Ryan. (RRID: SCR_017697).
 
- Methods and acknowledgement sections text generated with MethodsJ2 - please verify for accuracy and grammatical correctness"
+ Methods and acknowledgement sections text generated with MethodsJ2 - please verify for accuracy and grammatical correctness",
