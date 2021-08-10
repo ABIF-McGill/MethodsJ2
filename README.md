@@ -298,6 +298,7 @@ As an example, rows 21 and 24 ('Microscope' and 'Select Objective') in the follo
 
 ![CSV_output_](https://user-images.githubusercontent.com/64212264/128735433-6a44693a-46cb-432c-a495-8f94a8741ffb.PNG)
 
+> See [the example csv file here](https://github.com/ABIF-McGill/MethodsJ2/blob/main/MethodsJ2_methods_text_BPAE_3color_30p-200ms_63xOil_003_diffExp_Int___000.csv)
 
 
 <br />
