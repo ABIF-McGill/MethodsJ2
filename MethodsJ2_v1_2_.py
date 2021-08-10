@@ -153,10 +153,11 @@ MJ2_structure_file_URL)
 	settings = settingsDialogJSON['settings']
 
 
-	def print_and_log(a, b, c):
+	def print_and_log(a, b, c, d=''):
 		print(a + " " + b)
 		IJ.log(a +" " + b)
-		writer.writerow([a, c, b])
+		writer.writerow([a, d, c, b])
+		print(d)
 		
 
 	def welcomeBox():
@@ -242,22 +243,22 @@ MJ2_structure_file_URL)
 	def dialog_getter(settings, i):
 		if settings[i].get('Dialog_Type') == 'addCheckbox':
 			settings[i]['userInput'] = str(gui.getNextBoolean())
-			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''))
+			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''), settings[i].get('Schema_ID', ''))
 
 		if settings[i].get('Dialog_Type') == 'addStringField':
 			settings[i]['userInput'] = gui.getNextString()
-			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''))
+			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''), settings[i].get('Schema_ID', ''))
 
 		if settings[i].get('Dialog_Type') == 'addChoice':
 			if len(settings[i]['tempList']) > 0:
 				settings[i]['userInput'] = gui.getNextChoice()
-				print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''))
+				print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''), settings[i].get('Schema_ID', ''))
 			else:
 				settings[i]['blurb'] = "not found"
 
 		if settings[i].get('Dialog_Type') == 'addChoiceInternal':
 			settings[i]['userInput'] = gui.getNextChoice()
-			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''))
+			print_and_log(settings[i].get('Setting'), (settings[i]['userInput']), settings[i].get('metadata value', ''),  settings[i].get('Schema_ID', ''))
 		return (settings[i].get('userInput'))
 
 	def getInfoAndBlurb(userInput, settings, i):
@@ -365,7 +366,7 @@ MJ2_structure_file_URL)
 	
 	f = open(file_to_create, 'wb')
 	writer = csv.writer(f)
-	writer.writerow(['Label', 'Image metadata value', 'User input value'])
+	writer.writerow(['Label', 'Micro-Meta App Schema_ID', 'Image metadata value', 'User input value'])
 
 	
 	print_and_log("Script", "MethodsJ2 " + mj2_version, '')
@@ -714,7 +715,7 @@ MJ2_structure_file_URL)
 		scopeBlurb += getInfo_noDialogBox(settings, i)
 
 
-	print_and_log("Microscope: ", scopeTextCSV, ID)
+	print_and_log("Microscope: ", scopeTextCSV, ID, data['MicroscopeStand'].get('Schema_ID', ''))
 
 	print(scopeManu.lower().strip())
 	print('-----------------')
