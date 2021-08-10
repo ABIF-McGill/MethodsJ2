@@ -29,7 +29,7 @@
 #
 #
 #
-# 	August 06 2021
+# 	August 09 2021
 #
 #	See biorxiv preprint:
 #	MethodsJ2: A Software Tool to Improve Microscopy Methods Reporting
