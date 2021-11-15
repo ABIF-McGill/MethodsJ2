@@ -1024,7 +1024,7 @@ MJ2_structure_file_URL)
 	
 
 	disclaimer = '\n --- Methods text generated with MethodsJ2 - please verify for accuracy and grammatical correctness' 
-	concat_text = disclaimer +'\n' + scopeBlurb + objectiveBlurb + blurb_dim + '\n' + blurb + acknowledgement_blurb + '\n' + '---'
+	concat_text = disclaimer +'\n' + scopeBlurb + objectiveBlurb + blurb_dim + '\n' + blurb + acknowledgement_blurb + "\n" + "---"
 	concat_text = textCleanUp(concat_text)
 	
 	print_and_log("MethodsJ2 text generation based on user input and on a Micro-Meta App hardware file:", concat_text,'')
