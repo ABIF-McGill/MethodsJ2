@@ -2,7 +2,11 @@
 # MethodsJ2
 Building on [MethodsJ](https://github.com/tp81/MethodsJ) , **MethodsJ2** helps users write a materials and methods text for microscopy experiments by sourcing experiment information from metadata, as well as information from a microscope hardware configuration file generated in Micro-Meta App. A draft experiment methods section text is generated which can then be revised and used in written manuscripts and reports, etc. 
 
-See [MethodsJ2: A Software Tool to Improve Microscopy Methods Reporting](https://www.biorxiv.org/content/10.1101/2021.06.23.449674v1) on bioRxiv
+See our preprint [MethodsJ2: A Software Tool to Improve Microscopy Methods Reporting](https://www.biorxiv.org/content/10.1101/2021.06.23.449674v1) on bioRxiv
+
+<br>
+
+Update October 2021: Please check out our paper: [MethodsJ2: a software tool to capture metadata and generate comprehensive microscopy methods text](https://www.nature.com/articles/s41592-021-01290-5) published on October 15!
 
 <br />
 
