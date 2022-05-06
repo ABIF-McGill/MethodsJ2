@@ -585,9 +585,9 @@
             "blurb": "with %s CO2."
         },
         {
-            "Dialog_Box": "Focus Stabilization  ",
+            "Dialog_Box": "Focus Stabilization",
             "category": "toggle",
-            "Setting": "",
+            "Setting": "Focus stabilization device: ",
             "Schema_ID": "FocusStabilizationDevice.json",
             "attributes": [
                 "Name",
